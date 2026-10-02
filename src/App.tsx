@@ -1,0 +1,40 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Index from "./pages/Index.tsx";
+import Programs from "./pages/Programs.tsx";
+import Instructors from "./pages/Instructors.tsx";
+import Schedule from "./pages/Schedule.tsx";
+import Stories from "./pages/Stories.tsx";
+import Contact from "./pages/Contact.tsx";
+import PlacementTest from "./pages/PlacementTest.tsx";
+import Enroll from "./pages/Enroll.tsx";
+import NotFound from "./pages/NotFound.tsx";
+
+const queryClient = new QueryClient();
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/instructors" element={<Instructors />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/placement-test" element={<PlacementTest />} />
+          <Route path="/enroll" element={<Enroll />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
