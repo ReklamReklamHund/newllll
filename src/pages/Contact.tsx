@@ -6,32 +6,32 @@ import { Button } from "@/components/ui/button";
 
 const locations = [
   {
-    name: "Main Campus",
-    address: "125 Language Boulevard, Suite 300, Metro City, ST 12345",
-    phone: "(555) 123-4567",
-    email: "info@linguabridge.academy",
-    hours: "Mon–Fri 8:00 AM – 9:00 PM, Sat 9 AM – 5 PM, Sun 10 AM – 3 PM",
-    parking: "Free parking in building garage, entrance on Oak Street",
-    transit: "Metro Line 2 (Language Center Station), Bus Routes 15, 22, 44",
+    name: "Huvudkontor",
+    address: "Språkvägen 125, 123 45 Stockholm",
+    phone: "08-123 456 78",
+    email: "info@reklamartiklaruf.se",
+    hours: "Mån–fre 08:00–21:00, lör 09:00–17:00, sön 10:00–15:00",
+    parking: "Gratis parkering i husets garage, ingång från Ekgatan",
+    transit: "Tunnelbana linje 2 (Språkcentrum), buss 15, 22, 44",
   },
   {
-    name: "Downtown Location",
-    address: "789 Central Avenue, Downtown Metro City, ST 12301",
-    phone: "(555) 123-4568",
-    email: "downtown@linguabridge.academy",
-    hours: "Mon–Fri 9:00 AM – 8:00 PM, Sat 10 AM – 4 PM, Closed Sunday",
-    parking: "Street parking and nearby garage ($5/hour)",
-    transit: "Metro Lines 1 & 3 (Central Station), Bus Routes 8, 12, 30",
+    name: "Citykontor",
+    address: "Centralgatan 789, 111 22 Stockholm",
+    phone: "08-123 456 79",
+    email: "city@reklamartiklaruf.se",
+    hours: "Mån–fre 09:00–20:00, lör 10:00–16:00, stängt söndagar",
+    parking: "Gatuparkering och närliggande garage (50 kr/tim)",
+    transit: "Tunnelbana linje 1 och 3 (Centralstationen), buss 8, 12, 30",
   },
 ];
 
 const faqs = [
-  { q: "Do I need to take a placement test?", a: "Yes, unless you're a complete beginner. The test helps us place you at the right level." },
-  { q: "What is your cancellation policy?", a: "We offer a 14-day money-back guarantee. Private lessons can be cancelled up to 48 hours in advance." },
-  { q: "Can I switch classes after enrolling?", a: "Yes, within the first two sessions of a new term." },
-  { q: "Do you offer corporate/group discounts?", a: "Yes, 15% discount for groups of 5 or more employees." },
-  { q: "Are materials included in tuition?", a: "Yes, all digital course materials are included." },
-  { q: "Do you offer visa documentation?", a: "Yes, for students enrolled in intensive programs." },
+  { q: "Behöver jag göra ett nivåtest?", a: "Ja, om du inte är helt nybörjare. Testet hjälper oss att placera dig på rätt nivå." },
+  { q: "Vad gäller för avbokning?", a: "Vi erbjuder 14 dagars öppet köp. Privatlektioner kan avbokas upp till 48 timmar i förväg." },
+  { q: "Kan jag byta kurs efter anmälan?", a: "Ja, inom de två första lektionstillfällena på en ny termin." },
+  { q: "Erbjuder ni företags- eller grupprabatt?", a: "Ja, 15 % rabatt för grupper om 5 eller fler anställda." },
+  { q: "Ingår kursmaterial i avgiften?", a: "Ja, allt digitalt kursmaterial ingår." },
+  { q: "Utfärdar ni intyg för visum?", a: "Ja, för elever som är inskrivna på intensivprogram." },
 ];
 
 export default function Contact() {
@@ -43,8 +43,8 @@ export default function Contact() {
       <main className="flex-1">
         <section className="bg-primary py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground mb-4">Contact Us</h1>
-            <p className="text-primary-foreground/80 max-w-xl mx-auto">We'd love to hear from you. Visit us, call, or send us a message.</p>
+            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground mb-4">Kontakta oss</h1>
+            <p className="text-primary-foreground/80 max-w-xl mx-auto">Vi hör gärna från dig. Besök oss, ring eller skicka ett meddelande.</p>
           </div>
         </section>
 
@@ -53,12 +53,12 @@ export default function Contact() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Locations */}
               <div className="space-y-8">
-                <h2 className="font-heading text-2xl font-bold text-foreground">Our Locations</h2>
+                <h2 className="font-heading text-2xl font-bold text-foreground">Våra kontor</h2>
                 {locations.map((loc) => (
                   <div key={loc.name} className="card-elevated">
                     <h3 className="font-heading font-bold text-lg text-foreground mb-4">{loc.name}</h3>
                     <div className="bg-muted rounded-lg h-40 flex items-center justify-center text-muted-foreground text-sm mb-4">
-                      📍 Map View
+                      📍 Kartvy
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary shrink-0" /><span>{loc.address}</span></div>
@@ -74,30 +74,30 @@ export default function Contact() {
 
               {/* Contact Form */}
               <div>
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
+                <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Skicka ett meddelande</h2>
                 <form className="card-elevated space-y-5" onSubmit={(e) => e.preventDefault()}>
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Name <span className="text-destructive">*</span></label>
-                    <input id="name" type="text" required className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background placeholder:text-muted-foreground focus:border-primary" placeholder="Your full name" />
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Namn <span className="text-destructive">*</span></label>
+                    <input id="name" type="text" required className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background placeholder:text-muted-foreground focus:border-primary" placeholder="Ditt fullständiga namn" />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email <span className="text-destructive">*</span></label>
-                    <input id="email" type="email" required className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background placeholder:text-muted-foreground focus:border-primary" placeholder="you@example.com" />
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">E-post <span className="text-destructive">*</span></label>
+                    <input id="email" type="email" required className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background placeholder:text-muted-foreground focus:border-primary" placeholder="du@exempel.se" />
                   </div>
                   <div>
-                    <label htmlFor="language" className="block text-sm font-medium text-foreground mb-1.5">Language of Interest</label>
+                    <label htmlFor="language" className="block text-sm font-medium text-foreground mb-1.5">Språk du är intresserad av</label>
                     <select id="language" className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background focus:border-primary">
-                      <option value="">Select a language</option>
-                      {["English (ESL)", "Spanish", "French", "German", "Mandarin", "Japanese", "Italian", "Portuguese"].map((l) => (
+                      <option value="">Välj ett språk</option>
+                      {["Engelska", "Spanska", "Franska", "Tyska", "Mandarin", "Japanska", "Italienska", "Portugisiska"].map((l) => (
                         <option key={l} value={l}>{l}</option>
                       ))}
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Message <span className="text-destructive">*</span></label>
-                    <textarea id="message" required rows={4} className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background placeholder:text-muted-foreground focus:border-primary resize-y" placeholder="How can we help?" />
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Meddelande <span className="text-destructive">*</span></label>
+                    <textarea id="message" required rows={4} className="w-full border-2 border-input rounded-lg px-4 py-3 text-foreground bg-background placeholder:text-muted-foreground focus:border-primary resize-y" placeholder="Hur kan vi hjälpa dig?" />
                   </div>
-                  <Button type="submit" className="w-full">Send Message</Button>
+                  <Button type="submit" className="w-full">Skicka meddelande</Button>
                 </form>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function Contact() {
         {/* FAQ */}
         <section className="section-padding bg-card">
           <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">Frequently Asked Questions</h2>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">Vanliga frågor</h2>
             <div className="space-y-3">
               {faqs.map((faq, i) => (
                 <div key={i} className="border border-border rounded-xl overflow-hidden">
