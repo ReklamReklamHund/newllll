@@ -64,7 +64,8 @@ export default function Index() {
           <div className="relative container mx-auto px-4 md:px-6 py-20 lg:py-28">
             <div className="max-w-2xl">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6">
-                Företag i Sverige spenderar omkring 6-8 miljarder på 
+                Företag i Sverige spenderar omkring 
+                6-8 miljarder på 
                 reklam artiklar.
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-8 max-w-xl">
