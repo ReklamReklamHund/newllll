@@ -54,7 +54,7 @@ export default function Index() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
+        <section className="relative min-h-[460px] lg:min-h-[540px] flex items-center">
           <img
             src={heroImage}
             alt="Diverse students learning together in a bright classroom"
