@@ -20,7 +20,7 @@ export default function Header() {
       <nav className="container mx-auto flex items-center justify-between px-4 md:px-6 h-16" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-2 font-heading font-extrabold text-xl text-foreground">
           <GraduationCap className="h-8 w-8 text-primary" />
-          <span>Lingua Bridge</span>
+          <span>ReklamArtiklarUF</span>
         </Link>
 
         {/* Desktop nav */}
