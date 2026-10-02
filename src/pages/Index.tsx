@@ -74,7 +74,7 @@ export default function Index() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" asChild>
-                  <Link to="/placement-test">Take Free Placement Test</Link>
+                  <Link to="/placement-test">Butik</Link>
                 </Button>
                 <Button variant="outline" size="lg" className="border-2 border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 font-semibold" asChild>
                   <Link to="/programs">Explore Programs <ArrowRight className="ml-2 h-4 w-4" /></Link>
