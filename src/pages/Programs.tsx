@@ -6,52 +6,52 @@ import { ArrowRight } from "lucide-react";
 
 const programs = [
   {
-    name: "English (ESL)", flag: "🇺🇸", levels: "A1–C2",
-    formats: ["Group Classes", "Private Lessons", "Online", "Intensive"],
-    prices: { group: "$299/mo", private: "$65/hr", online: "$249/mo", intensive: "$899 (4 wks)" },
-    desc: "Comprehensive English instruction for speakers of other languages. IELTS/TOEFL prep, business communication, and academic English.",
+    name: "Engelska", flag: "🇺🇸", levels: "A1–C2",
+    formats: ["Gruppkurser", "Privatlektioner", "Online", "Intensivkurs"],
+    prices: { grupp: "2 990 kr/mån", privat: "650 kr/tim", online: "2 490 kr/mån", intensiv: "8 990 kr (4 v)" },
+    desc: "Omfattande engelskundervisning. Förberedelse för IELTS/TOEFL, affärsengelska och akademisk engelska.",
   },
   {
-    name: "Spanish", flag: "🇪🇸", levels: "A1–C2",
-    formats: ["Group Classes", "Private Lessons", "Online", "Weekend Workshops"],
-    prices: { group: "$299/mo", private: "$65/hr", online: "$249/mo" },
-    desc: "From conversational basics to business fluency. Explore Hispanic culture while mastering grammar and communication.",
+    name: "Spanska", flag: "🇪🇸", levels: "A1–C2",
+    formats: ["Gruppkurser", "Privatlektioner", "Online", "Helgworkshops"],
+    prices: { grupp: "2 990 kr/mån", privat: "650 kr/tim", online: "2 490 kr/mån" },
+    desc: "Från vardagskonversation till affärsspanska. Utforska den spanskspråkiga kulturen samtidigt som du bemästrar grammatiken.",
   },
   {
-    name: "French", flag: "🇫🇷", levels: "A1–B2",
-    formats: ["Group Classes", "Private Lessons", "Online"],
-    prices: { group: "$299/mo", private: "$65/hr", online: "$249/mo" },
-    desc: "Blend linguistic precision with cultural immersion. DELF/DALF preparation and French literature.",
+    name: "Franska", flag: "🇫🇷", levels: "A1–B2",
+    formats: ["Gruppkurser", "Privatlektioner", "Online"],
+    prices: { grupp: "2 990 kr/mån", privat: "650 kr/tim", online: "2 490 kr/mån" },
+    desc: "Språklig precision möter kulturfördjupning. Förberedelse för DELF/DALF och fransk litteratur.",
   },
   {
-    name: "German", flag: "🇩🇪", levels: "A1–C1",
-    formats: ["Group Classes", "Private Lessons", "Intensive"],
-    prices: { group: "$299/mo", private: "$65/hr", intensive: "$899 (4 wks)" },
-    desc: "Systematic instruction that makes German grammar achievable. Academic and technical language specialties.",
+    name: "Tyska", flag: "🇩🇪", levels: "A1–C1",
+    formats: ["Gruppkurser", "Privatlektioner", "Intensivkurs"],
+    prices: { grupp: "2 990 kr/mån", privat: "650 kr/tim", intensiv: "8 990 kr (4 v)" },
+    desc: "Systematisk undervisning som gör tysk grammatik begriplig. Specialisering på akademiskt och tekniskt språk.",
   },
   {
-    name: "Mandarin Chinese", flag: "🇨🇳", levels: "A1–B2",
-    formats: ["Group Classes", "Private Lessons", "Online"],
-    prices: { group: "$319/mo", private: "$70/hr", online: "$269/mo" },
-    desc: "Character writing, tonal accuracy, and business Mandarin. HSK preparation available.",
+    name: "Mandarin", flag: "🇨🇳", levels: "A1–B2",
+    formats: ["Gruppkurser", "Privatlektioner", "Online"],
+    prices: { grupp: "3 190 kr/mån", privat: "700 kr/tim", online: "2 690 kr/mån" },
+    desc: "Teckenskrift, tonläge och affärsmandarin. HSK-förberedelse erbjuds.",
   },
   {
-    name: "Japanese", flag: "🇯🇵", levels: "A1–B2",
-    formats: ["Group Classes", "Private Lessons", "Weekend Workshops"],
-    prices: { group: "$319/mo", private: "$70/hr" },
-    desc: "JLPT preparation, keigo (honorific language), and cultural immersion through modern and traditional content.",
+    name: "Japanska", flag: "🇯🇵", levels: "A1–B2",
+    formats: ["Gruppkurser", "Privatlektioner", "Helgworkshops"],
+    prices: { grupp: "3 190 kr/mån", privat: "700 kr/tim" },
+    desc: "JLPT-förberedelse, keigo (hövlighetsspråk) och kulturfördjupning genom modernt och traditionellt material.",
   },
   {
-    name: "Italian", flag: "🇮🇹", levels: "A1–B1",
-    formats: ["Group Classes", "Private Lessons"],
-    prices: { group: "$299/mo", private: "$65/hr" },
-    desc: "Discover the beauty of Italian language and culture. Conversational focus with grammar foundations.",
+    name: "Italienska", flag: "🇮🇹", levels: "A1–B1",
+    formats: ["Gruppkurser", "Privatlektioner"],
+    prices: { grupp: "2 990 kr/mån", privat: "650 kr/tim" },
+    desc: "Upptäck det italienska språkets och kulturens skönhet. Konversationsfokus med grammatisk grund.",
   },
   {
-    name: "Portuguese", flag: "🇧🇷", levels: "A1–B1",
-    formats: ["Group Classes", "Private Lessons", "Online"],
-    prices: { group: "$299/mo", private: "$65/hr", online: "$249/mo" },
-    desc: "Brazilian and European Portuguese options. Business and travel-focused programs.",
+    name: "Portugisiska", flag: "🇧🇷", levels: "A1–B1",
+    formats: ["Gruppkurser", "Privatlektioner", "Online"],
+    prices: { grupp: "2 990 kr/mån", privat: "650 kr/tim", online: "2 490 kr/mån" },
+    desc: "Brasiliansk och europeisk portugisiska. Program inriktade på affärer och resor.",
   },
 ];
 
@@ -62,8 +62,8 @@ export default function Programs() {
       <main className="flex-1">
         <section className="bg-primary py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground mb-4">Language Programs</h1>
-            <p className="text-primary-foreground/80 max-w-xl mx-auto">8 languages, all proficiency levels, multiple formats to fit your life.</p>
+            <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground mb-4">Språkprogram</h1>
+            <p className="text-primary-foreground/80 max-w-xl mx-auto">8 språk, alla nivåer, flera format som passar ditt liv.</p>
           </div>
         </section>
 
@@ -77,7 +77,7 @@ export default function Programs() {
                     <h2 className="text-2xl font-bold font-heading text-foreground">{prog.name}</h2>
                   </div>
                   <span className="inline-flex self-start items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary mb-3">
-                    Levels {prog.levels}
+                    Nivåer {prog.levels}
                   </span>
                   <p className="text-sm text-muted-foreground mb-4 flex-1">{prog.desc}</p>
                   <div className="flex flex-wrap gap-1.5 mb-4">
@@ -87,9 +87,9 @@ export default function Programs() {
                   </div>
                   <div className="border-t border-border pt-4 mt-auto">
                     <div className="flex items-baseline gap-1 mb-3">
-                      <span className="text-sm text-muted-foreground">from</span>
+                      <span className="text-sm text-muted-foreground">från</span>
                       <span className="text-2xl font-extrabold text-primary font-heading">{Object.values(prog.prices)[0].split("/")[0]}</span>
-                      <span className="text-sm text-muted-foreground">/{Object.values(prog.prices)[0].split("/")[1] || "session"}</span>
+                      <span className="text-sm text-muted-foreground">/{Object.values(prog.prices)[0].split("/")[1] || "tillfälle"}</span>
                     </div>
                     <div className="space-y-1 text-xs text-muted-foreground">
                       {Object.entries(prog.prices).map(([key, val]) => (
@@ -109,10 +109,10 @@ export default function Programs() {
         {/* CTA */}
         <section className="bg-primary section-padding">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="font-heading text-3xl font-bold text-primary-foreground mb-4">Not Sure Which Level?</h2>
-            <p className="text-primary-foreground/80 mb-8">Take our free placement test to find your perfect starting point.</p>
+            <h2 className="font-heading text-3xl font-bold text-primary-foreground mb-4">Osäker på vilken nivå?</h2>
+            <p className="text-primary-foreground/80 mb-8">Gör vårt kostnadsfria nivåtest för att hitta rätt startpunkt.</p>
             <Button variant="hero" asChild>
-              <Link to="/placement-test">Take Free Placement Test <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/placement-test">Gör det kostnadsfria nivåtestet <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </section>

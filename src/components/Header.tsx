@@ -5,11 +5,11 @@ import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Programs", href: "/programs" },
-  { label: "Instructors", href: "/instructors" },
-  { label: "Schedule", href: "/schedule" },
-  { label: "Success Stories", href: "/stories" },
-  { label: "Contact", href: "/contact" },
+  { label: "Program", href: "/programs" },
+  { label: "Lärare", href: "/instructors" },
+  { label: "Schema", href: "/schedule" },
+  { label: "Framgångshistorier", href: "/stories" },
+  { label: "Kontakt", href: "/contact" },
 ];
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="bg-card border-b border-border sticky top-0 z-50 shadow-sm">
-      <nav className="container mx-auto flex items-center justify-between px-4 md:px-6 h-16" aria-label="Main navigation">
+      <nav className="container mx-auto flex items-center justify-between px-4 md:px-6 h-16" aria-label="Huvudmeny">
         <Link to="/" className="flex items-center gap-2 font-heading font-extrabold text-xl text-foreground">
           <img src={logo} alt="ReklamArtiklar UF" className="h-20 w-20 -my-2 object-contain" />
           <span className="ml-3 text-[hsl(var(--logo-blue))]">ReklamArtiklarUF</span>
@@ -44,10 +44,10 @@ export default function Header() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="outline" size="sm" asChild>
-            <Link to="/placement-test">Placement Test</Link>
+            <Link to="/placement-test">Nivåtest</Link>
           </Button>
           <Button variant="accent" size="sm" asChild>
-            <Link to="/enroll">Enroll Now</Link>
+            <Link to="/enroll">Anmäl dig</Link>
           </Button>
         </div>
 
@@ -56,7 +56,7 @@ export default function Header() {
           className="lg:hidden p-2 rounded-lg"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
-          aria-label="Toggle menu"
+          aria-label="Visa eller dölj meny"
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -84,10 +84,10 @@ export default function Header() {
           </ul>
           <div className="flex flex-col gap-2 pt-2 border-t border-border">
             <Button variant="outline" size="sm" asChild>
-              <Link to="/placement-test" onClick={() => setMobileOpen(false)}>Placement Test</Link>
+              <Link to="/placement-test" onClick={() => setMobileOpen(false)}>Nivåtest</Link>
             </Button>
             <Button variant="accent" size="sm" asChild>
-              <Link to="/enroll" onClick={() => setMobileOpen(false)}>Enroll Now</Link>
+              <Link to="/enroll" onClick={() => setMobileOpen(false)}>Anmäl dig</Link>
             </Button>
           </div>
         </div>
