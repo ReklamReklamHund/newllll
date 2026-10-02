@@ -68,7 +68,9 @@ export default function Index() {
                 6-8 miljarder på reklam artiklar per år.
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-8 max-w-xl">
-                Professional language instruction in 8 languages with flexible scheduling and proven results. Join 2,500+ students who achieved fluency with us.
+                Svenska företag lägger miljarder på reklamartiklar varje år men hur vet ni att ni har fått det bästa priset? Djungeln av leverantörer gör det krångligt och tidskrävande att jämföra.
+
+                Vi på ReklamArtiklarUF gör jobbet åt er. Så istället för att kasta pengar i sjön. kolla igenom våra bästa produkter eller kontakta oss så hittar vi det ni vill ha.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero" asChild>
