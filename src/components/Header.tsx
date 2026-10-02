@@ -20,7 +20,7 @@ export default function Header() {
     <header className="bg-card border-b border-border sticky top-0 z-50 shadow-sm">
       <nav className="container mx-auto flex items-center justify-between px-4 md:px-6 h-16" aria-label="Main navigation">
         <Link to="/" className="flex items-center gap-2 font-heading font-extrabold text-xl text-foreground">
-          <img src={logo} alt="ReklamArtiklar UF" className="h-12 w-12 object-contain" />
+          <img src={logo} alt="ReklamArtiklar UF" className="h-20 w-20 -my-2 object-contain" />
           <span>ReklamArtiklarUF</span>
         </Link>
 
