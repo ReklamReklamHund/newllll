@@ -54,14 +54,14 @@ export default function Index() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
+        <section className="relative min-h-[460px] lg:min-h-[540px] flex items-center">
           <img
             src={heroImage}
             alt="Diverse students learning together in a bright classroom"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="hero-overlay absolute inset-0" />
-          <div className="relative container mx-auto px-4 md:px-6 pt-8 lg:pt-12 pb-20 lg:pb-28">
+          <div className="relative container mx-auto px-4 md:px-6 pt-0 lg:pt-2 pb-20 lg:pb-28">
             <div className="max-w-2xl">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6">
                 Företag i Sverige spenderar omkring     
