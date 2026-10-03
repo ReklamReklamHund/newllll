@@ -50,10 +50,13 @@ export default function Butik() {
               {column.items.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center justify-between bg-background border border-border rounded-xl px-4 py-3"
+                  className="flex items-center gap-3 bg-background border border-border rounded-xl px-4 py-3"
                 >
-                  <span className="text-sm font-medium text-foreground">{item}</span>
-                  <span className="text-xs text-foreground/50">{column.title}</span>
+                  {item.image && (
+                    <img src={item.image} alt={item.name} className="h-10 w-10 rounded-lg object-cover" />
+                  )}
+                  <span className="text-sm font-medium text-foreground">{item.name}</span>
+                  <span className="ml-auto text-xs text-foreground/50">{column.title}</span>
                 </li>
               ))}
             </ul>
