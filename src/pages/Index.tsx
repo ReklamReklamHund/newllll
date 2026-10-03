@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Award, Users, BookOpen, Globe, Star, ArrowRight, CheckCircle } from "lucide-react";
+import { Star, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-classroom.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const stats = [
-  { icon: Award, value: "15+", label: "År av excellens" },
-  { icon: Users, value: "2 500+", label: "Nöjda elever" },
-  { icon: BookOpen, value: "24", label: "Expertlärare" },
-  { icon: Globe, value: "8", label: "Språk att välja på" },
-];
 
 const programs = [
   { name: "Engelska", levels: "A1–C2", price: "2 990 kr", flag: "🇺🇸" },
@@ -84,20 +78,6 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="bg-card border-b border-border">
-          <div className="container mx-auto px-4 md:px-6 py-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <stat.icon className="h-8 w-8 mx-auto mb-3 text-primary" />
-                  <div className="text-3xl md:text-4xl font-extrabold font-heading text-foreground">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Programs Preview */}
         <section className="section-padding">
