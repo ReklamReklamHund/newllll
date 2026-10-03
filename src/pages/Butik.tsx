@@ -40,6 +40,8 @@ export default function Butik() {
           </section>
         ))}
       </div>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }
