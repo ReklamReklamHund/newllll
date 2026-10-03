@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { label: "Butik", href: "/programs" },
   { label: "Om oss", href: "/contact" },
+  { label: "Kontakta oss", href: "/contact" },
 ];
 
 export default function Header() {
