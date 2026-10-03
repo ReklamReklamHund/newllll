@@ -1,18 +1,38 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const columns = [
+type Product = { name: string; image?: string };
+
+const columns: { title: string; items: Product[] }[] = [
   {
     title: "Premium",
-    items: ["Produkt 1", "Produkt 2", "Produkt 3", "Produkt 4", "Produkt 5"],
+    items: [
+      { name: "Produkt 1" },
+      { name: "Produkt 2" },
+      { name: "Produkt 3" },
+      { name: "Produkt 4" },
+      { name: "Produkt 5" },
+    ],
   },
   {
     title: "Medium",
-    items: ["Produkt 1", "Produkt 2", "Produkt 3", "Produkt 4", "Produkt 5"],
+    items: [
+      { name: "Bomullskasse" },
+      { name: "Produkt 2" },
+      { name: "Produkt 3" },
+      { name: "Produkt 4" },
+      { name: "Produkt 5" },
+    ],
   },
   {
     title: "Basic",
-    items: ["Produkt 1", "Produkt 2", "Produkt 3", "Produkt 4", "Produkt 5"],
+    items: [
+      { name: "Produkt 1" },
+      { name: "Produkt 2" },
+      { name: "Produkt 3" },
+      { name: "Produkt 4" },
+      { name: "Produkt 5" },
+    ],
   },
 ];
 
