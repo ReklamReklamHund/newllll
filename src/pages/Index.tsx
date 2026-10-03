@@ -1,16 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Award, Users, BookOpen, Globe, Star, ArrowRight, CheckCircle } from "lucide-react";
+import { Star, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-classroom.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const stats = [
-  { icon: Award, value: "15+", label: "År av excellens" },
-  { icon: Users, value: "2 500+", label: "Nöjda elever" },
-  { icon: BookOpen, value: "24", label: "Expertlärare" },
-  { icon: Globe, value: "8", label: "Språk att välja på" },
-];
 
 const programs = [
   { name: "Engelska", levels: "A1–C2", price: "2 990 kr", flag: "🇺🇸" },
