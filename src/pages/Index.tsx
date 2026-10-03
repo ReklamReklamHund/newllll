@@ -77,7 +77,7 @@ export default function Index() {
                   <Link to="/placement-test">Butik</Link>
                 </Button>
                 <Button variant="outline" size="lg" className="border-2 border-primary-foreground/30 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 font-semibold" asChild>
-                  <Link to="/programs">Utforska program <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  <Link to="/programs">Kontakta oss <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
