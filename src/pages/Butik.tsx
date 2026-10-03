@@ -1,3 +1,6 @@
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 const columns = [
   {
     title: "Premium",
@@ -15,7 +18,9 @@ const columns = [
 
 export default function Butik() {
   return (
-    <main className="container mx-auto px-4 md:px-6 py-12">
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="container mx-auto px-4 md:px-6 py-12 flex-1">
       <h1 className="font-heading font-extrabold text-4xl text-foreground mb-8">Butik</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {columns.map((column) => (
