@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Butik", href: "/programs" },
+  { label: "Butik", href: "/butik" },
   { label: "Om oss", href: "/contact" },
   { label: "Kontakta oss", href: "/contact" },
 ];
