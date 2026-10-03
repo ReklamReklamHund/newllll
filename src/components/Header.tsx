@@ -5,11 +5,8 @@ import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Program", href: "/programs" },
-  { label: "Lärare", href: "/instructors" },
-  { label: "Schema", href: "/schedule" },
-  { label: "Framgångshistorier", href: "/stories" },
-  { label: "Kontakt", href: "/contact" },
+  { label: "Butik", href: "/programs" },
+  { label: "Om oss", href: "/contact" },
 ];
 
 export default function Header() {
