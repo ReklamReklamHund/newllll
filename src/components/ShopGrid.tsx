@@ -1,3 +1,5 @@
+import kasseImage from "@/assets/kasse.jpg.asset.json";
+
 export type Product = { name: string; image?: string };
 
 export const shopColumns: { title: string; items: Product[] }[] = [
@@ -14,7 +16,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
   {
     title: "Medium",
     items: [
-      { name: "Bomullskasse" },
+      { name: "Bomullskasse", image: kasseImage.url },
       { name: "Produkt 2" },
       { name: "Produkt 3" },
       { name: "Produkt 4" },
@@ -45,11 +47,19 @@ export default function ShopGrid() {
                 key={`${column.title}-${item.name}-${index}`}
                 className="flex min-h-16 items-center gap-3 rounded-lg border border-border bg-background px-4 py-3"
               >
-                {item.image && (
-                  <img src={item.image} alt={item.name} className="h-10 w-10 rounded-md object-cover" />
-                )}
-                <span className="text-sm font-medium text-foreground">{item.name}</span>
-                <span className="ml-auto text-xs text-muted-foreground">{column.title}</span>
+                <div className="flex min-w-0 flex-1 flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-medium text-foreground">{item.name}</span>
+                    <span className="ml-auto text-xs text-muted-foreground">{column.title}</span>
+                  </div>
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="aspect-[4/3] w-full rounded-md object-cover"
+                    />
+                  )}
+                </div>
               </li>
             ))}
           </ul>
