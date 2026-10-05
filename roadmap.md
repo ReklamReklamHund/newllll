@@ -5,5 +5,7 @@
 - [x] Ersätt språksektionerna på startsidan med butiken
 - [x] Produkter klickbara → egen produktsida
 - [x] Produktsidan öppnas alltid överst på sidan
+- [x] Val av format, färg, tryck och antal på Bomullskassen + pris
+
 
 - [ ] Byta ut texten i sidfoten mot riktig företagsinfo (väntar på uppgifter från användaren)
