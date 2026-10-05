@@ -6,7 +6,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Programs from "./pages/Programs.tsx";
 import Butik from "./pages/Butik.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import Produkt from "./pages/Produkt.tsx";
+
 import Instructors from "./pages/Instructors.tsx";
 import Schedule from "./pages/Schedule.tsx";
 import Stories from "./pages/Stories.tsx";
@@ -23,7 +25,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
+
           <Route path="/" element={<Index />} />
           <Route path="/butik" element={<Butik />} />
           <Route path="/butik/:slug" element={<Produkt />} />
