@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Car, Bus } from "lucide-react";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const locations = [
@@ -25,17 +24,8 @@ const locations = [
   },
 ];
 
-const faqs = [
-  { q: "Behöver jag göra ett nivåtest?", a: "Ja, om du inte är helt nybörjare. Testet hjälper oss att placera dig på rätt nivå." },
-  { q: "Vad gäller för avbokning?", a: "Vi erbjuder 14 dagars öppet köp. Privatlektioner kan avbokas upp till 48 timmar i förväg." },
-  { q: "Kan jag byta kurs efter anmälan?", a: "Ja, inom de två första lektionstillfällena på en ny termin." },
-  { q: "Erbjuder ni företags- eller grupprabatt?", a: "Ja, 15 % rabatt för grupper om 5 eller fler anställda." },
-  { q: "Ingår kursmaterial i avgiften?", a: "Ja, allt digitalt kursmaterial ingår." },
-  { q: "Utfärdar ni intyg för visum?", a: "Ja, för elever som är inskrivna på intensivprogram." },
-];
 
 export default function Contact() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -100,30 +90,6 @@ export default function Contact() {
                   <Button type="submit" className="w-full">Skicka meddelande</Button>
                 </form>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="section-padding bg-card">
-          <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">Vanliga frågor</h2>
-            <div className="space-y-3">
-              {faqs.map((faq, i) => (
-                <div key={i} className="border border-border rounded-xl overflow-hidden">
-                  <button
-                    className="w-full text-left px-5 py-4 font-semibold text-foreground flex justify-between items-center hover:bg-muted/50 transition-colors"
-                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    aria-expanded={openFaq === i}
-                  >
-                    {faq.q}
-                    <span className="text-muted-foreground ml-2">{openFaq === i ? "−" : "+"}</span>
-                  </button>
-                  {openFaq === i && (
-                    <div className="px-5 pb-4 text-sm text-muted-foreground">{faq.a}</div>
-                  )}
-                </div>
-              ))}
             </div>
           </div>
         </section>
