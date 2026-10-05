@@ -45,7 +45,7 @@ export default function ShopGrid() {
             {column.items.map((item, index) => (
               <li
                 key={`${column.title}-${item.name}-${index}`}
-                className="flex min-h-16 items-center gap-3 rounded-lg border border-border bg-background px-4 py-3"
+                className="flex min-h-16 items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 transition-colors duration-200 hover:border-primary hover:bg-primary/5"
               >
                 <div className="flex min-w-0 flex-1 flex-col gap-3">
                   <div className="flex items-center gap-3">
