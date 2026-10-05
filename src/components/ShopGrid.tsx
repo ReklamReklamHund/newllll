@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import kasseImage from "@/assets/kasse.jpg.asset.json";
 
-export type Product = { name: string; image?: string; description?: string };
+export type ProductChoice = { label: string; price: number; color?: string };
+
+export type ProductOption = {
+  id: string;
+  label: string;
+  kind: "swatch" | "button";
+  choices: ProductChoice[];
+};
+
+export type Product = {
+  name: string;
+  image?: string;
+  description?: string;
+  options?: ProductOption[];
+};
+
 
 const slugify = (value: string) =>
   value
