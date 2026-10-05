@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Programs from "./pages/Programs.tsx";
 import Butik from "./pages/Butik.tsx";
+import OmOss from "./pages/OmOss.tsx";
+
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import Produkt from "./pages/Produkt.tsx";
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/butik" element={<Butik />} />
           <Route path="/butik/:slug" element={<Produkt />} />
+          <Route path="/om-oss" element={<OmOss />} />
+
           <Route path="/programs" element={<Programs />} />
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/schedule" element={<Schedule />} />
