@@ -1,6 +1,30 @@
+import { Link } from "react-router-dom";
 import kasseImage from "@/assets/kasse.jpg.asset.json";
 
-export type Product = { name: string; image?: string };
+export type Product = { name: string; image?: string; description?: string };
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/å/g, "a")
+    .replace(/ä/g, "a")
+    .replace(/ö/g, "o")
+    .replace(/é/g, "e")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+export const productSlug = (columnTitle: string, name: string) =>
+  `${slugify(columnTitle)}-${slugify(name)}`;
+
+export function findProduct(slug?: string) {
+  if (!slug) return null;
+  for (const column of shopColumns) {
+    for (const item of column.items) {
+      if (productSlug(column.title, item.name) === slug) return { column, item };
+    }
+  }
+  return null;
+}
 
 export const shopColumns: { title: string; items: Product[] }[] = [
   {
@@ -47,7 +71,10 @@ export default function ShopGrid() {
                 key={`${column.title}-${item.name}-${index}`}
                 className="flex min-h-16 items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 transition-colors duration-200 hover:border-primary hover:bg-primary/5"
               >
-                <div className="flex min-w-0 flex-1 flex-col gap-3">
+                <Link
+                  to={`/butik/${productSlug(column.title, item.name)}`}
+                  className="flex min-w-0 flex-1 flex-col gap-3"
+                >
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-medium text-foreground">{item.name}</span>
                     <span className="ml-auto text-xs text-muted-foreground">{column.title}</span>
@@ -59,7 +86,7 @@ export default function ShopGrid() {
                       className="aspect-[4/3] w-full rounded-md object-cover"
                     />
                   )}
-                </div>
+                </Link>
               </li>
             ))}
           </ul>
