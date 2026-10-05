@@ -55,7 +55,56 @@ export const shopColumns: { title: string; items: Product[] }[] = [
   {
     title: "Medium",
     items: [
-      { name: "Bomullskasse", image: kasseImage.url },
+      {
+        name: "Bomullskasse",
+        image: kasseImage.url,
+        options: [
+          {
+            id: "format",
+            label: "Format",
+            kind: "button",
+            choices: [
+              { label: "40 x 10 x 35", price: 39 },
+              { label: "38 x 10 x 42", price: 49 },
+            ],
+          },
+          {
+            id: "farg",
+            label: "Färg",
+            kind: "swatch",
+            choices: [
+              { label: "Natur", price: 0, color: "#E8E0D5" },
+              { label: "Svart", price: 0, color: "#1C1C1C" },
+              { label: "Mörkblå", price: 0, color: "#1F3A5F" },
+              { label: "Röd", price: 0, color: "#B3282D" },
+              { label: "Grå", price: 0, color: "#8A8F98" },
+            ],
+          },
+          {
+            id: "tryck",
+            label: "Tryck",
+            kind: "button",
+            choices: [
+              { label: "Inget tryck", price: 0 },
+              { label: "1-färgstryck", price: 9 },
+              { label: "2-färgstryck", price: 15 },
+              { label: "Broderi", price: 25 },
+            ],
+          },
+          {
+            id: "antal",
+            label: "Antal",
+            kind: "button",
+            choices: [
+              { label: "50", price: 0 },
+              { label: "100", price: 0 },
+              { label: "250", price: 0 },
+              { label: "500", price: 0 },
+            ],
+          },
+        ],
+      },
+
       { name: "Produkt 2" },
       { name: "Produkt 3" },
       { name: "Produkt 4" },
