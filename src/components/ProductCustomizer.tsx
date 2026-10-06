@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Check, Image as ImageIcon, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,15 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
   const [quantityText, setQuantityText] = useState("");
   const quantity = Number(quantityText);
   const price = configurationPrice(options, selected, quantity);
+  const stepRefs = useRef<(HTMLFieldSetElement | null)[]>([]);
+  const quantityRef = useRef<HTMLDivElement>(null);
+  const priceRef = useRef<HTMLDivElement>(null);
+
+  const scrollToStep = (target?: HTMLElement | null) => {
+    if (!target) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
+  };
 
   return (
     <section id="anpassa" aria-labelledby="anpassa-rubrik" className="mt-16 scroll-mt-24 border-t border-border pt-10">
