@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Check, Image as ImageIcon, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,15 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
   const [quantityText, setQuantityText] = useState("");
   const quantity = Number(quantityText);
   const price = configurationPrice(options, selected, quantity);
+  const stepRefs = useRef<(HTMLFieldSetElement | null)[]>([]);
+  const quantityRef = useRef<HTMLDivElement>(null);
+  const priceRef = useRef<HTMLDivElement>(null);
+
+  const scrollToStep = (target?: HTMLElement | null) => {
+    if (!target) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    target.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
+  };
 
   return (
     <section id="anpassa" aria-labelledby="anpassa-rubrik" className="mt-16 scroll-mt-24 border-t border-border pt-10">
@@ -24,7 +33,7 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
         {options.map((option, step) => {
           const choices = availableChoices(option, options, selected);
           return (
-            <fieldset key={option.id} className="min-w-0 border-b border-border pb-8 mb-8">
+            <fieldset key={option.id} ref={(element) => { stepRefs.current[step] = element; }} className="min-w-0 scroll-mt-24 border-b border-border pb-8 mb-8">
               <legend className="mb-5 flex items-center gap-3 font-heading text-xl font-semibold">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary text-sm text-primary">{step + 1}</span>
                 {option.label}
@@ -40,7 +49,11 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
                         variant="secondary"
                         aria-label={`${option.label}: ${choice.label}`}
                         aria-pressed={active}
-                        onClick={() => setSelected((previous) => selectProductChoice(options, previous, option.id, index))}
+                        onClick={() => {
+                          const wasActive = selected[option.id] === index;
+                          setSelected((previous) => selectProductChoice(options, previous, option.id, index));
+                          if (!wasActive) scrollToStep(stepRefs.current[step + 1] ?? quantityRef.current);
+                        }}
                         className={`relative border bg-card whitespace-normal transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${active ? "border-primary bg-primary/5 text-primary ring-1 ring-primary" : "border-border text-foreground"} ${option.kind === "image" ? "h-auto w-full flex-col justify-start overflow-hidden p-0" : "h-11 px-5"}`}
                       >
                         {option.kind === "image" && (
@@ -60,18 +73,20 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
             </fieldset>
           );
         })}
-        <fieldset className="min-w-0 mb-10">
-          <legend className="mb-5 flex items-center gap-3 font-heading text-xl font-semibold">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm text-primary">6</span>Antal
-          </legend>
-          <div className="flex flex-wrap gap-3 mb-4">
-            {[50, 100, 250, 500].map((value) => <Button type="button" key={value} variant="secondary" aria-pressed={quantity === value} onClick={() => setQuantityText(String(value))} className={`border transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${quantity === value ? "border-primary bg-primary/5 text-primary" : "border-border bg-card"}`}>{value} st</Button>)}
-          </div>
-          <label htmlFor="product-quantity" className="block text-sm font-medium mb-2">Antal kassar</label>
-          <input id="product-quantity" type="number" min="1" step="1" inputMode="numeric" value={quantityText} onChange={(event) => setQuantityText(event.target.value)} className="h-11 w-40 rounded-md border border-input bg-background px-3 text-foreground" placeholder="Ange antal" aria-invalid={quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1)} />
-          {quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1) && <p className="mt-2 text-sm text-destructive">Ange ett heltal större än 0.</p>}
-        </fieldset>
-        <div className="border-t-2 border-primary pt-6" aria-live="polite" aria-atomic="true">
+        <div ref={quantityRef} className="min-w-0 mb-10 scroll-mt-24">
+          <fieldset className="min-w-0">
+            <legend className="mb-5 flex items-center gap-3 font-heading text-xl font-semibold">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm text-primary">6</span>Antal
+            </legend>
+            <div className="flex flex-wrap gap-3 mb-4">
+              {[50, 100, 250, 500].map((value) => <Button type="button" key={value} variant="secondary" aria-pressed={quantity === value} onClick={() => { setQuantityText(String(value)); scrollToStep(priceRef.current); }} className={`border transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${quantity === value ? "border-primary bg-primary/5 text-primary" : "border-border bg-card"}`}>{value} st</Button>)}
+            </div>
+            <label htmlFor="product-quantity" className="block text-sm font-medium mb-2">Antal kassar</label>
+            <input id="product-quantity" type="number" min="1" step="1" inputMode="numeric" value={quantityText} onChange={(event) => setQuantityText(event.target.value)} className="h-11 w-40 rounded-md border border-input bg-background px-3 text-foreground" placeholder="Ange antal" aria-invalid={quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1)} />
+            {quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1) && <p className="mt-2 text-sm text-destructive">Ange ett heltal större än 0.</p>}
+          </fieldset>
+        </div>
+        <div ref={priceRef} className="border-t-2 border-primary pt-6 scroll-mt-24" aria-live="polite" aria-atomic="true">
           <h3 className="font-heading text-xl font-semibold">Estimerat pris</h3>
           {price ? <>
             <p className="mt-3 font-heading text-4xl font-bold">{priceFormat.format(price.total)}</p>
