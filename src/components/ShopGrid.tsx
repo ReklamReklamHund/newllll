@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import kasseImage from "@/assets/kasse.jpg.asset.json";
 
-export type ProductChoice = { label: string; price: number; color?: string };
+export type ProductChoice = {
+  label: string;
+  price: number;
+  image?: string;
+  printMethod?: string;
+};
 
 export type ProductOption = {
   id: string;
   label: string;
-  kind: "swatch" | "button";
+  kind: "image" | "button";
   choices: ProductChoice[];
 };
 
@@ -58,11 +63,12 @@ export const shopColumns: { title: string; items: Product[] }[] = [
       {
         name: "Bomullskasse",
         image: kasseImage.url,
+        description: "En bomullskasse med plats för ert motiv. Välj mellan två format och kombinera grundfärg, placering och tryck efter era önskemål.",
         options: [
           {
             id: "format",
             label: "Format",
-            kind: "button",
+            kind: "image",
             choices: [
               { label: "40 x 10 x 35", price: 39 },
               { label: "38 x 10 x 42", price: 49 },
@@ -70,36 +76,41 @@ export const shopColumns: { title: string; items: Product[] }[] = [
           },
           {
             id: "farg",
-            label: "Färg",
-            kind: "swatch",
+            label: "Grundfärg",
+            kind: "image",
             choices: [
-              { label: "Natur", price: 0, color: "#E8E0D5" },
-              { label: "Svart", price: 0, color: "#1C1C1C" },
-              { label: "Mörkblå", price: 0, color: "#1F3A5F" },
-              { label: "Röd", price: 0, color: "#B3282D" },
-              { label: "Grå", price: 0, color: "#8A8F98" },
+              ...["Naturfärgad", "Vit", "Svart", "Gul", "Röd", "Ljusblå", "Blå", "Orange", "Rosa", "Mörkblå", "Ljusgrön"].map((label) => ({ label, price: 0 })),
+            ],
+          },
+          {
+            id: "motiv",
+            label: "Motiv",
+            kind: "image",
+            choices: [
+              { label: "Ett motiv på framsidan", price: 0 },
+              { label: "Samma motiv fram och bak", price: 0 },
+              { label: "Olika motiv fram och bak", price: 0 },
             ],
           },
           {
             id: "tryck",
             label: "Tryck",
-            kind: "button",
+            kind: "image",
             choices: [
-              { label: "Inget tryck", price: 0 },
-              { label: "1-färgstryck", price: 9 },
-              { label: "2-färgstryck", price: 15 },
-              { label: "Broderi", price: 25 },
+              { label: "Digital transfertryck", price: 25 },
+              { label: "Screentryck", price: 9 },
             ],
           },
           {
-            id: "antal",
-            label: "Antal",
+            id: "fargning",
+            label: "Färgning",
             kind: "button",
             choices: [
-              { label: "50", price: 0 },
-              { label: "100", price: 0 },
-              { label: "250", price: 0 },
-              { label: "500", price: 0 },
+              { label: "4 färger", price: 0, printMethod: "Digital transfertryck" },
+              { label: "1 färg", price: 0, printMethod: "Screentryck" },
+              { label: "2 färger", price: 6, printMethod: "Screentryck" },
+              { label: "3 färger", price: 0, printMethod: "Screentryck" },
+              { label: "5 färger", price: 0, printMethod: "Screentryck" },
             ],
           },
         ],
