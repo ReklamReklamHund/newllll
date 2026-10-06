@@ -1,5 +1,5 @@
 # Roadmap
-- [ ] Ny produktlayout med Anpassa, bildval, villkorad färgning, antal och preliminärt pris
+- [x] Ny produktlayout med Anpassa, bildval, villkorad färgning, antal och preliminärt pris
 
 - [x] Flytta upp hero-texten
 - [x] Gör hero-sektionen lite kortare
