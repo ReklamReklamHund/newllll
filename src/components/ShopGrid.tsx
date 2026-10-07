@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import kasseImage from "@/assets/kasse.jpg.asset.json";
+import bredkasseImage from "@/assets/bredkasse.png.asset.json";
 
 export type ProductChoice = {
   label: string;
@@ -70,7 +71,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
             label: "Format",
             kind: "image",
             choices: [
-              { label: "40 x 10 x 35", price: 39 },
+              { label: "40 x 10 x 35", price: 39, image: bredkasseImage.url },
               { label: "38 x 10 x 42", price: 49 },
             ],
           },
