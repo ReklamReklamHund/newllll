@@ -57,7 +57,7 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
                         className={`relative border bg-card whitespace-normal transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${active ? "border-primary bg-primary/5 text-primary ring-1 ring-primary" : "border-border text-foreground"} ${option.kind === "image" ? "h-auto w-full flex-col justify-start overflow-hidden p-0" : "h-11 px-5"}`}
                       >
                         {option.kind === "image" && (
-                          choice.image ? <img src={choice.image} alt={choice.label} className="aspect-[4/3] w-full object-contain bg-muted" /> :
+                          choice.image ? <img src={choice.image} alt={choice.label} className="aspect-[4/3] w-full object-contain" /> :
                           <span className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 bg-muted text-muted-foreground">
                             <ImageIcon className="!h-7 !w-7" strokeWidth={1.25} aria-hidden="true" />
                             <span className="text-xs font-normal">Bild saknas</span>
