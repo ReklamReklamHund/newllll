@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import kasseImage from "@/assets/kasse.jpg.asset.json";
-import bredkasseImage from "@/assets/bredkasse.png.asset.json";
+import bredkasseDetailImage from "@/assets/bredkasse-detail.jpg.asset.json";
 import kasselangDetailImage from "@/assets/kasselang-detail.jpg.asset.json";
 
 export type ProductChoice = {
