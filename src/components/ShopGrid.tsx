@@ -72,7 +72,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
             label: "Format",
             kind: "image",
             choices: [
-              { label: "40 x 10 x 35", price: 39, image: bredkasseImage.url },
+              { label: "40 x 10 x 35", price: 39, image: bredkasseDetailImage.url },
               { label: "38 x 10 x 42", price: 49, image: kasselangDetailImage.url },
             ],
           },
