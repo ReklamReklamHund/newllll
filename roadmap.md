@@ -8,6 +8,10 @@
 - [x] Produktsidan öppnas alltid överst på sidan
 - [x] Val av format, färg, tryck och antal på Bomullskassen + pris
 - [x] Egen "Om oss"-sida istället för kontaktsidan
+- [x] Bild på formatvalet 40 x 10 x 35 (bredkasse)
+- [ ] Bild på formatvalet 38 x 10 x 42 (kasselång finns uppladdad)
+- [ ] Bilder till grundfärg, motiv och tryck
+- [ ] Riktiga priser på format och tryck
 
 
 
