@@ -33,7 +33,7 @@ export default function Produkt() {
           <>
             <div className="mt-8 grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
               {found.item.image ? (
-                <img src={found.item.image} alt={found.item.name} className="aspect-[4/3] w-full rounded-md bg-muted object-contain" />
+                <img src={found.item.image} alt={found.item.name} className="aspect-[4/3] w-full object-contain" />
               ) : (
                 <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 rounded-md bg-muted text-muted-foreground">
                   <ImageIcon className="h-10 w-10" strokeWidth={1.25} aria-hidden="true" />
