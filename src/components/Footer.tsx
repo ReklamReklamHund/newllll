@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-[hsl(var(--logo-blue))]">ReklamArtiklarUF</span>
             </Link>
             <p className="text-sm leading-relaxed text-background/60">
-              Vi lägger den tiden ni inte vill lägga på att jämföra leverantörer
+              Vi lägger den tiden ni inte vill lägga<br />på att jämföra leverantörer
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>Språkvägen 125, 123 45 Stockholm</span>
+                <span>Sundsvalls gymnasium, Västermalm</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
@@ -32,7 +32,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>info@reklamartiklaruf.se</span>
+                <span>reklamartiklaruf@gmail.com</span>
               </li>
             </ul>
           </div>
