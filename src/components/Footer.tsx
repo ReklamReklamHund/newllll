@@ -19,18 +19,18 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="md:text-right">
             <h3 className="font-heading font-semibold text-background mb-4">Kontakta oss</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
+            <ul className="space-y-3 text-sm md:flex md:flex-col md:items-end">
+              <li className="flex items-start gap-2 md:flex-row-reverse">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                 <span>Sundsvalls gymnasium, Västermalm</span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 md:flex-row-reverse">
                 <Phone className="h-4 w-4 shrink-0" />
                 <span>08-123 456 78</span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 md:flex-row-reverse">
                 <Mail className="h-4 w-4 shrink-0" />
                 <span>reklamartiklaruf@gmail.com</span>
               </li>
