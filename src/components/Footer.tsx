@@ -33,10 +33,8 @@ export default function Footer() {
           <div>
             <h3 className="font-heading font-semibold text-background mb-4">Snabblänkar</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/placement-test" className="hover:text-background transition-colors">Nivåtest</Link></li>
               <li><Link to="/schedule" className="hover:text-background transition-colors">Schema</Link></li>
               <li><Link to="/instructors" className="hover:text-background transition-colors">Våra lärare</Link></li>
-              <li><Link to="/enroll" className="hover:text-background transition-colors">Anmäl dig</Link></li>
               <li><Link to="/stories" className="hover:text-background transition-colors">Framgångshistorier</Link></li>
             </ul>
           </div>

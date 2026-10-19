@@ -1,8 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const programs = [
   {
@@ -103,17 +100,6 @@ export default function Programs() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-primary section-padding">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="font-heading text-3xl font-bold text-primary-foreground mb-4">Osäker på vilken nivå?</h2>
-            <p className="text-primary-foreground/80 mb-8">Gör vårt kostnadsfria nivåtest för att hitta rätt startpunkt.</p>
-            <Button variant="hero" asChild>
-              <Link to="/placement-test">Gör det kostnadsfria nivåtestet <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
           </div>
         </section>
       </main>

@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Star, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const stories = [
   {
@@ -95,16 +93,6 @@ export default function Stories() {
                 </div>
               </div>
             ))}
-          </div>
-        </section>
-
-        <section className="bg-primary section-padding">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="font-heading text-3xl font-bold text-primary-foreground mb-4">Börja din egen framgångshistoria</h2>
-            <p className="text-primary-foreground/80 mb-8">Gå med bland tusentals elever som förvandlat sina karriärer med oss.</p>
-            <Button variant="hero" asChild>
-              <Link to="/enroll">Anmäl dig nu <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
           </div>
         </section>
       </main>

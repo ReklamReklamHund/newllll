@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Butik", href: "/butik" },
@@ -40,15 +39,6 @@ export default function Header() {
           ))}
         </ul>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <Button variant="outline" size="sm" asChild>
-            <Link to="/placement-test">Nivåtest</Link>
-          </Button>
-          <Button variant="accent" size="sm" asChild>
-            <Link to="/enroll">Anmäl dig</Link>
-          </Button>
-        </div>
-
         {/* Mobile toggle */}
         <button
           className="lg:hidden p-2 rounded-lg"
@@ -80,14 +70,7 @@ export default function Header() {
               </li>
             ))}
           </ul>
-          <div className="flex flex-col gap-2 pt-2 border-t border-border">
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/placement-test" onClick={() => setMobileOpen(false)}>Nivåtest</Link>
-            </Button>
-            <Button variant="accent" size="sm" asChild>
-              <Link to="/enroll" onClick={() => setMobileOpen(false)}>Anmäl dig</Link>
-            </Button>
-          </div>
+
         </div>
       )}
     </header>
