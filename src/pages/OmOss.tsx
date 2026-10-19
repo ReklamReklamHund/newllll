@@ -70,7 +70,16 @@ export default function OmOss() {
               Ett ungdomsföretag som drivs av Melvin Vestin och Jakob Bovidsson
             </h2>
             <p className="mt-4 text-muted-foreground">
-              [Här fyller du i lite om bakgrunden – t.ex. ålder, ort och varför ni startade.]
+              Som elever på Sundsvalls gymnasium, Västermalm valde vi kursen entreprenörskap där
+              började vår resa, när vi såg alla valskyltar ute på gatorna. Vi ville satsa på
+              reklamskyltar och ha prylar på sidan av, men när vi började leta efter reklamartiklar
+              möttes vi av en djungel. Sidorna var svårnavigerade, priserna otydliga och så fort en
+              av oss hittade en produkt hade någon annan hittat samma sak billigare någon
+              annanstans.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Det var då vår idé föddes: vi gör grovjobbet åt kunden, så att ni slipper lägga tid
+              på att leta och jämföra själva.
             </p>
           </div>
         </section>
