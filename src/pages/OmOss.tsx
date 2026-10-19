@@ -13,7 +13,7 @@ const steps = [
   {
     icon: Scale,
     title: "Vi jämför leverantörerna",
-    text: "Vi frågar runt och samlar priser, frakt och leveranstider på samma villkor, så att ni kan jämföra dem mot varandra.",
+    text: "Vi frågar runt och samlar priser, frakt och leveranstider på samma villkor, så att ni kan jämföra dem mot varandra. Bakom varje produkt ligger minst 3–6 timmars research. Vi analyserar priser, fraktkostnader, kvalitet och miljöcertifieringar från olika leverantörer så att du får den bästa lösningen presenterad för dig.",
   },
   {
     icon: ThumbsUp,
