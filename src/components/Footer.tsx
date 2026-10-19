@@ -16,6 +16,9 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-background/60">
               Vi lägger den tiden ni inte vill lägga<br />på att jämföra leverantörer
             </p>
+            <p className="text-sm leading-relaxed text-background/60 mt-3">
+              Bakom varje produkt ligger minst 3–6 timmars research. Vi analyserar priser, fraktkostnader, kvalitet och miljöcertifieringar från olika leverantörer så att du får den bästa lösningen presenterad för dig.
+            </p>
           </div>
 
           {/* Contact */}
