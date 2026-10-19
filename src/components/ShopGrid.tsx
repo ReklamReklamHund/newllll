@@ -127,11 +127,12 @@ export const shopColumns: { title: string; items: Product[] }[] = [
   {
     title: "Basic",
     items: [
-      { name: "Produkt 1" },
+      { name: "Kulspetspenna" },
       { name: "Produkt 2" },
       { name: "Produkt 3" },
       { name: "Produkt 4" },
       { name: "Produkt 5" },
+      { name: "Produkt 6" },
     ],
   },
 ];
