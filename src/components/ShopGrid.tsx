@@ -52,7 +52,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
   {
     title: "Premium",
     items: [
-      { name: "Produkt 1" },
+      { name: "Paraply" },
       { name: "Produkt 2" },
       { name: "Produkt 3" },
       { name: "Produkt 4" },
@@ -128,8 +128,8 @@ export const shopColumns: { title: string; items: Product[] }[] = [
     title: "Basic",
     items: [
       { name: "Kulspetspenna" },
-      { name: "Produkt 2" },
-      { name: "Produkt 3" },
+      { name: "Tändsticksask" },
+      { name: "Läppbalsam" },
       { name: "Produkt 4" },
       { name: "Produkt 5" },
       { name: "Produkt 6" },
