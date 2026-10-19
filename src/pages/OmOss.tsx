@@ -18,7 +18,7 @@ const steps = [
   {
     icon: ThumbsUp,
     title: "Ni får ett underlag att ta ställning till",
-    text: "Ni ser vad alternativen faktiskt kostar och väljer i lugn och ro – utan att lägga en dag på att mejla leverantörer.",
+    text: "Vi lägger fram det alternativ vi bedömer ger bäst pris, kvalitet och miljöprofil – klart att säga ja eller nej till, utan att ni behöver lägga en dag på att mejla leverantörer.",
   },
 ];
 
