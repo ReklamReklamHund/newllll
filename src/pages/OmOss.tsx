@@ -17,8 +17,8 @@ const steps = [
   },
   {
     icon: ThumbsUp,
-    title: "Ni får ett underlag att ta ställning till",
-    text: "Vi lägger fram det alternativ vi bedömer ger bäst pris, kvalitet och miljöprofil – klart att säga ja eller nej till, utan att ni behöver lägga en dag på att mejla leverantörer.",
+    title: "Ni får ett bra pris",
+    text: "Ni stöttar ett UF-företag samtidigt som ni sparar både tid och pengar. Ni slipper hela stressen med att jämföra leverantörer.",
   },
 ];
 
