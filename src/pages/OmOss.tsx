@@ -61,6 +61,21 @@ export default function OmOss() {
           </div>
         </section>
 
+        <section className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+          <div className="max-w-3xl">
+            <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+              Ungdomsföretag
+            </span>
+            <h2 className="mt-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
+              Drivs av ungdomar, byggt på samma villkor
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              [Här fyller du i namnen på personerna som driver företaget och lite om bakgrunden –
+              t.ex. ålder, ort och varför ni startade.]
+            </p>
+          </div>
+        </section>
+
         <section className="border-t border-border bg-card">
           <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
             <div className="max-w-3xl">
