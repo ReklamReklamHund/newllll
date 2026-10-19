@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 font-heading font-extrabold text-xl text-background mb-4">
               <img src={logo} alt="ReklamArtiklar UF" className="h-14 w-14 object-contain" />
-              <span>ReklamArtiklarUF</span>
+              <span className="text-[hsl(var(--logo-blue))]">ReklamArtiklarUF</span>
             </Link>
             <p className="text-sm leading-relaxed text-background/60">
               Professionell språkundervisning i 8 språk med flexibla tider och beprövade resultat.
