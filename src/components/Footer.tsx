@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-background/80">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 font-heading font-extrabold text-xl text-background mb-4">
@@ -15,28 +15,6 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-background/60">
               Professionell språkundervisning i 8 språk med flexibla tider och beprövade resultat.
             </p>
-          </div>
-
-          {/* Programs */}
-          <div>
-            <h3 className="font-heading font-semibold text-background mb-4">Program</h3>
-            <ul className="space-y-2 text-sm">
-              {["Engelska", "Spanska", "Franska", "Tyska", "Mandarin", "Japanska"].map((lang) => (
-                <li key={lang}>
-                  <Link to="/programs" className="hover:text-background transition-colors">{lang}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-heading font-semibold text-background mb-4">Snabblänkar</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/schedule" className="hover:text-background transition-colors">Schema</Link></li>
-              <li><Link to="/instructors" className="hover:text-background transition-colors">Våra lärare</Link></li>
-              <li><Link to="/stories" className="hover:text-background transition-colors">Framgångshistorier</Link></li>
-            </ul>
           </div>
 
           {/* Contact */}
