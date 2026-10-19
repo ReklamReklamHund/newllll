@@ -67,11 +67,10 @@ export default function OmOss() {
               Ungdomsföretag
             </span>
             <h2 className="mt-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
-              Drivs av ungdomar, byggt på samma villkor
+              Ett ungdomsföretag som drivs av Melvin Vestin och Jakob Bovidsson
             </h2>
             <p className="mt-4 text-muted-foreground">
-              [Här fyller du i namnen på personerna som driver företaget och lite om bakgrunden –
-              t.ex. ålder, ort och varför ni startade.]
+              [Här fyller du i lite om bakgrunden – t.ex. ålder, ort och varför ni startade.]
             </p>
           </div>
         </section>
