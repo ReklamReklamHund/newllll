@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-classroom.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ShopGrid from "@/components/ShopGrid";
 
 export default function Index() {
   return (
@@ -39,21 +38,6 @@ export default function Index() {
                 </Button>
               </div>
             </div>
-          </div>
-        </section>
-
-
-        <section className="section-padding" aria-labelledby="shop-heading">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2 id="shop-heading" className="font-heading text-3xl font-bold text-foreground md:text-4xl">Vår butik</h2>
-              </div>
-              <Button variant="outline" asChild>
-                <Link to="/butik">Öppna butiken <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-            </div>
-            <ShopGrid />
           </div>
         </section>
       </main>
