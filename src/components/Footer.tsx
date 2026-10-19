@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-[hsl(var(--logo-blue))]">ReklamArtiklarUF</span>
             </Link>
             <p className="text-sm leading-relaxed text-background/60">
-              Professionell språkundervisning i 8 språk med flexibla tider och beprövade resultat.
+              Vi lägger den tiden ni inte vill lägga på att jämföra leverantörer
             </p>
           </div>
 
