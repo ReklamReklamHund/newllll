@@ -43,7 +43,7 @@ export default function Index() {
         </section>
 
 
-        <section className="py-12 md:py-16" aria-label="Motto">
+        <section className="py-4 md:py-6" aria-label="Motto">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <p className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-[hsl(var(--logo-blue))] tracking-tight">
               Billigt&nbsp;&nbsp;Unikt&nbsp;&nbsp;Användbart
