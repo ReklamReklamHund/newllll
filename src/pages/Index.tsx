@@ -42,6 +42,7 @@ export default function Index() {
           </div>
         </section>
 
+        <div className="w-full h-1 bg-[hsl(var(--logo-blue))]" />
 
         <section className="py-4 md:py-6" aria-label="Motto">
           <div className="container mx-auto px-4 md:px-6 text-center">
