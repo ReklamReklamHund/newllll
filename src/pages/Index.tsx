@@ -51,7 +51,7 @@ export default function Index() {
           </div>
         </section>
 
-        <div className="w-full h-px bg-[hsl(var(--logo-blue))]/40" />
+        <div className="w-full h-1 bg-[hsl(var(--logo-blue))]/40" />
 
         <section className="pt-2 md:pt-3 pb-16 md:pb-24" aria-labelledby="shop-heading">
           <div className="container mx-auto px-4 md:px-6">
