@@ -43,6 +43,15 @@ export default function Index() {
         </section>
 
 
+        <section className="py-12 md:py-16" aria-label="Motto">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <p className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-[hsl(var(--logo-blue))] tracking-tight">
+              Billigt&nbsp;&nbsp;Unikt&nbsp;&nbsp;Användbart
+            </p>
+          </div>
+        </section>
+
+
         <section className="section-padding" aria-labelledby="shop-heading">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
