@@ -82,7 +82,12 @@ export const shopColumns: { title: string; items: Product[] }[] = [
               ...["Naturfärgad", "Vit", "Svart", "Gul", "Röd", "Ljusblå", "Blå", "Orange", "Rosa", "Mörkblå", "Ljusgrön"].map((label) => ({
                 label,
                 price: 0,
-                image: label === "Naturfärgad" ? "/images/image.png" : undefined,
+                image:
+                  label === "Naturfärgad"
+                    ? "/images/image.png"
+                    : label === "Vit"
+                      ? "/images/image copy 4.png"
+                      : undefined,
               })), 
             ],
           },
