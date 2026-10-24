@@ -94,7 +94,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
                           : label === "Röd"
                             ? "/images/röd/image.png"
                             : label === "Ljusblå"
-                              ? "/images/ljusblå/image.png"
+                              ? "/images/ljusblå/image copy 2.png"
                               : label === "Blå"
                                 ? "/images/blå/blå box/grundfärg/image.png"
                                 : label === "Orange"
