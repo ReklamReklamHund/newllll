@@ -122,7 +122,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
           {
             id: "tryck",
             label: "Tryck",
-            kind: "image",
+            kind: "button",
             choices: [
               { label: "Digital transfertryck", price: 25 },
               { label: "Screentryck", price: 9 },
