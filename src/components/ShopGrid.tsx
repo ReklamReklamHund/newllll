@@ -112,7 +112,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
           {
             id: "motiv",
             label: "Motiv",
-            kind: "image",
+            kind: "button",
             choices: [
               { label: "Ett motiv på framsidan", price: 0 },
               { label: "Samma motiv fram och bak", price: 0 },
