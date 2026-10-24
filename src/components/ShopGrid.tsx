@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import kasseImage from "@/assets/kasse.jpg.asset.json";
 import bredkasseDetailImage from "@/assets/bredkasse-detail.jpg.asset.json";
 import kasselangDetailImage from "@/assets/kasselang-detail.jpg.asset.json";
 
@@ -64,7 +63,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
     items: [
       {
         name: "Bomullskasse",
-        image: kasseImage.url,
+        image: "/images/image.png",
         description: "En bomullskasse med plats för ert motiv. Välj mellan två format och kombinera grundfärg, placering och tryck efter era önskemål.",
         options: [
           {
