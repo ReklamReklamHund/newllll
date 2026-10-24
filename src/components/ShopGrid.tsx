@@ -100,8 +100,10 @@ export const shopColumns: { title: string; items: Product[] }[] = [
                                 : label === "Orange"
                                   ? "/images/orange/orange box/grundfärg/image.png"
                                   : label === "Mörkblå"
-                                    ? "/images/blå/blå box/grundfärg/image copy 2.png"
-                                    : label === "Ljusgrön"
+                                      ? "/images/blå/blå box/grundfärg/image copy 2.png"
+                                      : label === "Rosa"
+                                        ? "/images/blå/blå box/grundfärg/rosa/image.png"
+                                        : label === "Ljusgrön"
                                     ? "/images/ljusgrön/image.png"
                                     : undefined,
               })), 
