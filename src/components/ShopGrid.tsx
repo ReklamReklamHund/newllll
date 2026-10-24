@@ -5,6 +5,7 @@ export type ProductChoice = {
   price: number;
   image?: string;
   printMethod?: string;
+  scale?: number;
 };
 
 export type ProductOption = {
@@ -70,7 +71,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
             kind: "image",
             choices: [
               { label: "40 x 10 x 35", price: 39, image: "/images/40x10x35/image.png" },
-              { label: "38 x 10 x 42", price: 49, image: "/images/38x10x42/image.png" },
+              { label: "38 x 10 x 42", price: 49, image: "/images/38x10x42/image.png", scale: 0.8 },
             ],
           },
           {
