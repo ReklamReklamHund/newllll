@@ -84,7 +84,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
                 price: 0,
                 image:
                   label === "Naturfärgad"
-                    ? "/images/image.png"
+                    ? "/images/image copy 3.png"
                     : label === "Vit"
                       ? "/images/image copy 4.png"
                       : undefined,
