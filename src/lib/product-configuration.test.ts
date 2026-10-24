@@ -19,6 +19,13 @@ describe("Bomullskassens anpassning", () => {
     expect(selected.fargning).toBeUndefined();
     expect(availableChoices(options[4], options, selected).map(({ choice }) => choice.label)).toEqual(["1 färg", "2 färger", "3 färger", "5 färger"]);
   });
+  it("döljer screentryck för svart men visar det för andra färger", () => {
+    const black = selectProductChoice(options, { tryck: 1 }, "farg", 2);
+    expect(availableChoices(options[3], options, black).map(({ choice }) => choice.label)).toEqual(["Digital transfertryck"]);
+
+    const red = selectProductChoice(options, { tryck: 1 }, "farg", 4);
+    expect(availableChoices(options[3], options, red).map(({ choice }) => choice.label)).toEqual(["Digital transfertryck", "Screentryck"]);
+  });
   it("döljer pris vid ofullständiga eller ogiltiga val och antal", () => {
     expect(configurationPrice(options, {}, 100)).toBeNull();
     const selected = { format: 0, farg: 0, motiv: 0, tryck: 0, fargning: 0 };

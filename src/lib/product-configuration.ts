@@ -4,10 +4,15 @@ export type ProductSelections = Record<string, number>;
 
 export function availableChoices(option: ProductOption, options: ProductOption[], selected: ProductSelections) {
   const print = options.find((item) => item.id === "tryck");
+  const color = options.find((item) => item.id === "farg");
   const method = print?.choices[selected.tryck]?.label;
+  const colorName = color?.choices[selected.farg]?.label;
   return option.choices
     .map((choice, index) => ({ choice, index }))
-    .filter(({ choice }) => !choice.printMethod || choice.printMethod === method);
+    .filter(({ choice }) => {
+      if (choice.label === "Screentryck" && colorName === "Svart") return false;
+      return !choice.printMethod || choice.printMethod === method;
+    });
 }
 
 export function selectProductChoice(options: ProductOption[], selected: ProductSelections, id: string, index: number): ProductSelections {
@@ -18,6 +23,15 @@ export function selectProductChoice(options: ProductOption[], selected: ProductS
     if (coloring) {
       const choices = availableChoices(coloring, options, next);
       if (choices.length === 1) next.fargning = choices[0].index;
+    }
+  }
+  if (id === "farg") {
+    const print = options.find((option) => option.id === "tryck");
+    const selectedColor = options.find((option) => option.id === "farg")?.choices[index]?.label;
+    const selectedPrint = print?.choices[next.tryck]?.label;
+    if (selectedColor === "Svart" && selectedPrint === "Screentryck") {
+      delete next.tryck;
+      delete next.fargning;
     }
   }
   return next;
