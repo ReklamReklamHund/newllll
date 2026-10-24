@@ -89,7 +89,9 @@ export const shopColumns: { title: string; items: Product[] }[] = [
                       ? "/images/image copy 4.png"
                       : label === "Svart"
                         ? "/images/image copy 5.png"
-                        : undefined,
+                        : label === "Gul"
+                          ? "/images/image copy 6.png"
+                          : undefined,
               })), 
             ],
           },
