@@ -97,7 +97,9 @@ export const shopColumns: { title: string; items: Product[] }[] = [
                               ? "/images/ljusblå/image.png"
                               : label === "Blå"
                                 ? "/images/image.png"
-                                : undefined,
+                                : label === "Orange"
+                                  ? "/images/orange/orange box/grundfärg/image.png"
+                                  : undefined,
               })), 
             ],
           },
