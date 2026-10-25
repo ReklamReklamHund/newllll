@@ -4,6 +4,7 @@ export type ProductChoice = {
   label: string;
   price: number;
   image?: string;
+  swatch?: string;
   printMethod?: string;
   scale?: number;
 };
@@ -160,11 +161,25 @@ export const shopColumns: { title: string; items: Product[] }[] = [
           {
             id: "farg",
             label: "Grundfärg",
-            kind: "button",
+            kind: "image",
             choices: [
-              { label: "Vit", price: 0 },
-              { label: "Blå", price: 0 },
-              { label: "Svart", price: 0 },
+              { label: "Transparent", price: 0, swatch: "linear-gradient(135deg, #f5f5f5, #e5e7eb)" },
+              { label: "Vit", price: 0, swatch: "#f8f8f6" },
+              { label: "Svart", price: 0, swatch: "#111111" },
+              { label: "Turkos", price: 0, swatch: "#0785b8" },
+              { label: "Gul", price: 0, swatch: "#f4c334" },
+              { label: "Röd", price: 0, swatch: "#f04446" },
+              { label: "Grön", price: 0, swatch: "#8ac63f" },
+              { label: "Blå", price: 0, swatch: "#203d78" },
+              { label: "Orange", price: 0, swatch: "#f1844e" },
+              { label: "Blå transparent", price: 0, swatch: "repeating-linear-gradient(135deg, #278cc5 0 8px, #369bd0 8px 16px)" },
+              { label: "Röd transparent", price: 0, swatch: "repeating-linear-gradient(135deg, #e52d55 0 8px, #f04462 8px 16px)" },
+              { label: "Orange transparent", price: 0, swatch: "repeating-linear-gradient(135deg, #f39325 0 8px, #f7a23a 8px 16px)" },
+              { label: "Ljus röd transparent", price: 0, swatch: "repeating-linear-gradient(135deg, #b837a3 0 8px, #cf4db5 8px 16px)" },
+              { label: "Blå metallic", price: 0, swatch: "linear-gradient(110deg, #159ce7 15%, #74c7f5 50%, #168dda 85%)" },
+              { label: "Guld metallic", price: 0, swatch: "linear-gradient(110deg, #fffca8 15%, #fffef0 50%, #fff9a0 85%)" },
+              { label: "Silver metallic", price: 0, swatch: "linear-gradient(110deg, #e5e7eb 15%, #ffffff 50%, #d1d5db 85%)" },
+              { label: "Rosé-champagne metallic", price: 0, swatch: "linear-gradient(110deg, #ffe0b5 15%, #fff8ec 50%, #ffd19f 85%)" },
             ],
           },
           {

@@ -3,11 +3,16 @@ import { findProduct } from "@/components/ShopGrid";
 import { availableChoices, configurationPrice, selectProductChoice } from "./product-configuration";
 
 const options = findProduct("medium-bomullskasse")?.item.options ?? [];
+const lipBalmOptions = findProduct("basic-lappbalsam")?.item.options ?? [];
 
 describe("Bomullskassens anpassning", () => {
   it("har rätt format och elva grundfärger", () => {
     expect(options[0].choices.map((choice) => choice.label)).toEqual(["40 x 10 x 35", "38 x 10 x 42"]);
     expect(options[1].choices).toHaveLength(11);
+  });
+  it("har sjutton grundfärger för läppbalsam", () => {
+    expect(lipBalmOptions[0].choices).toHaveLength(17);
+    expect(lipBalmOptions[0].choices.map((choice) => choice.label)).toContain("Rosé-champagne metallic");
   });
   it("visar bara fyra färger för digitalt tryck och väljer det automatiskt", () => {
     const selected = selectProductChoice(options, {}, "tryck", 0);

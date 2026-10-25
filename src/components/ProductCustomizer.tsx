@@ -57,11 +57,14 @@ export default function ProductCustomizer({ options, productName }: { options: P
                         className={`relative border bg-card whitespace-normal transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${active ? "border-primary bg-primary/5 text-primary ring-1 ring-primary" : "border-border text-foreground"} ${option.kind === "image" ? "h-auto w-full flex-col justify-start overflow-hidden p-0" : "h-11 px-5"}`}
                       >
                         {option.kind === "image" && (
-                          choice.image ? <img src={choice.image} alt={choice.label} className="aspect-[4/3] w-full object-contain" style={choice.scale ? { transform: `scale(${choice.scale})`, transformOrigin: "bottom center" } : undefined} /> :
-                          <span className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 bg-muted text-muted-foreground">
-                            <ImageIcon className="!h-7 !w-7" strokeWidth={1.25} aria-hidden="true" />
-                            <span className="text-xs font-normal">Bild saknas</span>
-                          </span>
+                          choice.image ? <img src={choice.image} alt={choice.label} className="aspect-[4/3] w-full object-contain" style={choice.scale ? { transform: `scale(${choice.scale})`, transformOrigin: "bottom center" } : undefined} /> : choice.swatch ?
+                            <span className="flex aspect-[4/3] w-full items-center justify-center bg-muted">
+                              <span className="h-8 w-16 rounded-sm border border-black/10 shadow-sm" style={{ background: choice.swatch }} aria-hidden="true" />
+                            </span> :
+                            <span className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-2 bg-muted text-muted-foreground">
+                              <ImageIcon className="!h-7 !w-7" strokeWidth={1.25} aria-hidden="true" />
+                              <span className="text-xs font-normal">Bild saknas</span>
+                            </span>
                         )}
                         <span className={option.kind === "image" ? "flex min-h-16 w-full items-center justify-center px-3 py-3 text-center leading-snug" : ""}>{choice.label}</span>
                         {active && <Check aria-hidden="true" className={option.kind === "image" ? "absolute right-2 top-2 rounded-full bg-primary text-primary-foreground p-0.5 !h-5 !w-5" : "shrink-0"} />}
