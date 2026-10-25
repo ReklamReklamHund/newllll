@@ -152,9 +152,9 @@ export const shopColumns: { title: string; items: Product[] }[] = [
   {
     title: "Basic",
     items: [
+      { name: "Läppbalsam", image: "/images/basic/lapbalsam_rkat.jpg" },
       { name: "Kulspetspenna" },
       { name: "Tändsticksask" },
-      { name: "Läppbalsam" },
       { name: "Produkt 4" },
       { name: "Produkt 5" },
       { name: "Produkt 6" },
