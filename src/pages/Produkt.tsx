@@ -57,18 +57,36 @@ export default function Produkt() {
                           <Info className="h-4 w-4 text-primary" aria-hidden="true" /> Information
                         </summary>
                         <div className="mt-4 w-full max-w-2xl rounded-lg border border-border bg-muted/30 p-5 text-sm leading-relaxed text-muted-foreground shadow-sm sm:p-6">
-                          <h2 className="font-heading text-xl font-semibold text-foreground">Information om läppbalsam</h2>
-                          <p className="mt-3">Dessa högkvalitativa läppbalsam trycks helst med din logotyp eller ditt företagsnamn. Du gör inte bara något gott för dina kunder, affärskontakter eller gäster – du ökar också medvetenheten om ditt märke. Läppbalsam med logotyp finns i många iögonfallande, kraftiga färger. Idealiska förutsättningar för att din reklamkampanj ska bli framgångsrik.</p>
-                          <ul className="mt-5 list-disc space-y-2 pl-5">
-                            <li>Rund läppbalsam att skruva ut</li>
-                            <li>7 cm, diameter 1,9 cm</li>
-                            <li>Yta för tryck på skaftet 1,1 x 4 cm eller 1,2 x 3,5 cm (transparenta varianter)</li>
-                            <li>Upp till 3-färgs tampongtryck eller fotorealistiskt digitaltryck</li>
-                            <li>Många olika grundfärger</li>
-                            <li>Solfaktor 10 eller 15 (beroende på variant)</li>
-                            <li>Hållbara minst 12 månader efter öppningen</li>
-                            <li>Vikt: 14 eller 16 g</li>
-                          </ul>
+                          {found.item.name === "Bomullskasse" ? (
+                            <>
+                              <h2 className="font-heading text-xl font-semibold text-foreground">Information om bomullskasse</h2>
+                              <p className="mt-3">Den extra lätta bomullskvaliteten hos de OEKO-TEX®-certifierade shoppingkassarna gör dem till ett praktiskt litet köphjälpmedel: Snabbt och enkelt ihopfällda kan de tas med var som helst och dras ut direkt vid behov. Spontana köp stuvas undan på nolltid. Och vem har dina kunder att tacka för de praktiska väskorna? Det är bäst att trycka detta med stora bokstäver på det mjuka tyget.</p>
+                              <ul className="mt-5 list-disc space-y-2 pl-5">
+                                <li>Format: 38 x 10 x 42 cm, 40 x 10 x 35 cm</li>
+                                <li>Med bälg</li>
+                                <li>OEKO-TEX® certifierad</li>
+                                <li>100 % bomull, 140 g/m²</li>
+                                <li>Digitaltryck (CMYK) eller 1 till 4 färgscreentryck (Pantone C + vit)</li>
+                                <li>Tryckbar fram- och/eller baksida (olika motiv möjliga)</li>
+                                <li>Många grundfärger</li>
+                              </ul>
+                            </>
+                          ) : (
+                            <>
+                              <h2 className="font-heading text-xl font-semibold text-foreground">Information om läppbalsam</h2>
+                              <p className="mt-3">Dessa högkvalitativa läppbalsam trycks helst med din logotyp eller ditt företagsnamn. Du gör inte bara något gott för dina kunder, affärskontakter eller gäster – du ökar också medvetenheten om ditt märke. Läppbalsam med logotyp finns i många iögonfallande, kraftiga färger. Idealiska förutsättningar för att din reklamkampanj ska bli framgångsrik.</p>
+                              <ul className="mt-5 list-disc space-y-2 pl-5">
+                                <li>Rund läppbalsam att skruva ut</li>
+                                <li>7 cm, diameter 1,9 cm</li>
+                                <li>Yta för tryck på skaftet 1,1 x 4 cm eller 1,2 x 3,5 cm (transparenta varianter)</li>
+                                <li>Upp till 3-färgs tampongtryck eller fotorealistiskt digitaltryck</li>
+                                <li>Många olika grundfärger</li>
+                                <li>Solfaktor 10 eller 15 (beroende på variant)</li>
+                                <li>Hållbara minst 12 månader efter öppningen</li>
+                                <li>Vikt: 14 eller 16 g</li>
+                              </ul>
+                            </>
+                          )}
                         </div>
                       </details>
                     </div>
