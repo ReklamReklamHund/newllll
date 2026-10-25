@@ -58,29 +58,17 @@ export default function Produkt() {
                         </summary>
                         <div className="mt-4 w-full max-w-2xl rounded-lg border border-border bg-muted/30 p-5 text-sm leading-relaxed text-muted-foreground shadow-sm sm:p-6">
                           <h2 className="font-heading text-xl font-semibold text-foreground">Information om läppbalsam</h2>
-                          <p className="mt-3">Ett praktiskt läppbalsam för kampanjer, events, giveaways och kundgåvor. Välj grundfärg, tryckmetod och antal tryckfärger för att skapa en produkt som passar ert varumärke.</p>
-                          <div className="mt-5 grid gap-5 sm:grid-cols-2">
-                            <div>
-                              <h3 className="font-semibold text-foreground">Produktdetaljer</h3>
-                              <ul className="mt-2 list-disc space-y-1 pl-5">
-                                <li>Format: 7 cm, diameter 1,9 cm</li>
-                                <li>17 grundfärger att välja mellan</li>
-                                <li>Passar för egen logotyp och budskap</li>
-                              </ul>
-                            </div>
-                            <div>
-                              <h3 className="font-semibold text-foreground">Tryckalternativ</h3>
-                              <ul className="mt-2 list-disc space-y-1 pl-5">
-                                <li>Tampongtryck med 1–3 färger</li>
-                                <li>Digitaltryck i 4-färgad CMYK</li>
-                                <li>Slutligt pris bekräftas i offert</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div className="mt-5 border-t border-border pt-4">
-                            <h3 className="font-semibold text-foreground">Bra att veta</h3>
-                            <p className="mt-2">Använd anpassningen för att se alla val i rätt ordning. När du har valt dina alternativ och antal kan du kontakta oss för offert, leveranstid och hjälp med original.</p>
-                          </div>
+                          <p className="mt-3">Dessa högkvalitativa läppbalsam trycks helst med din logotyp eller ditt företagsnamn. Du gör inte bara något gott för dina kunder, affärskontakter eller gäster – du ökar också medvetenheten om ditt märke. Läppbalsam med logotyp finns i många iögonfallande, kraftiga färger. Idealiska förutsättningar för att din reklamkampanj ska bli framgångsrik.</p>
+                          <ul className="mt-5 list-disc space-y-2 pl-5">
+                            <li>Rund läppbalsam att skruva ut</li>
+                            <li>7 cm, diameter 1,9 cm</li>
+                            <li>Yta för tryck på skaftet 1,1 x 4 cm eller 1,2 x 3,5 cm (transparenta varianter)</li>
+                            <li>Upp till 3-färgs tampongtryck eller fotorealistiskt digitaltryck</li>
+                            <li>Många olika grundfärger</li>
+                            <li>Solfaktor 10 eller 15 (beroende på variant)</li>
+                            <li>Hållbara minst 12 månader efter öppningen</li>
+                            <li>Vikt: 14 eller 16 g</li>
+                          </ul>
                         </div>
                       </details>
                     </div>
