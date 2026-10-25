@@ -152,7 +152,43 @@ export const shopColumns: { title: string; items: Product[] }[] = [
   {
     title: "Basic",
     items: [
-      { name: "Läppbalsam", image: "/images/basic/lapbalsam_rkat.jpg" },
+      {
+        name: "Läppbalsam",
+        image: "/images/basic/lapbalsam_rkat.jpg",
+        description: "Läppbalsam med valfri grundfärg och tryckmetod.",
+        options: [
+          {
+            id: "farg",
+            label: "Grundfärg",
+            kind: "button",
+            choices: [
+              { label: "Vit", price: 0 },
+              { label: "Blå", price: 0 },
+              { label: "Svart", price: 0 },
+            ],
+          },
+          {
+            id: "tryck",
+            label: "Tryck",
+            kind: "button",
+            choices: [
+              { label: "Tampongtryck", price: 0 },
+              { label: "Digitaltryck", price: 0 },
+            ],
+          },
+          {
+            id: "tryckfarger",
+            label: "Antal tryckfärger",
+            kind: "button",
+            choices: [
+              { label: "1 färg", price: 0, printMethod: "Tampongtryck" },
+              { label: "2 färger", price: 0, printMethod: "Tampongtryck" },
+              { label: "3 färger", price: 0, printMethod: "Tampongtryck" },
+              { label: "4-färgad (CMYK)", price: 0, printMethod: "Digitaltryck" },
+            ],
+          },
+        ],
+      },
       { name: "Kulspetspenna" },
       { name: "Tändsticksask" },
       { name: "Produkt 4" },

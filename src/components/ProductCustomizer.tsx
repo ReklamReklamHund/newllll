@@ -8,7 +8,7 @@ import type { ProductSelections } from "@/lib/product-configuration";
 
 const priceFormat = new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK", maximumFractionDigits: 0 });
 
-export default function ProductCustomizer({ options }: { options: ProductOption[] }) {
+export default function ProductCustomizer({ options, productName }: { options: ProductOption[]; productName: string }) {
   const [selected, setSelected] = useState<ProductSelections>({});
   const [quantityText, setQuantityText] = useState("");
   const quantity = Number(quantityText);
@@ -26,7 +26,7 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
   return (
     <section id="anpassa" aria-labelledby="anpassa-rubrik" className="mt-16 scroll-mt-24 border-t border-border pt-10">
       <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3">
-        <h2 id="anpassa-rubrik" className="font-heading text-3xl font-bold">Anpassa din bomullskasse</h2>
+        <h2 id="anpassa-rubrik" className="font-heading text-3xl font-bold">Anpassa din {productName.toLowerCase()}</h2>
         <span className="text-sm text-muted-foreground">{options.filter((option) => selected[option.id] !== undefined).length} av {options.length} val klara</span>
       </div>
       <div className="max-w-4xl">
@@ -76,12 +76,12 @@ export default function ProductCustomizer({ options }: { options: ProductOption[
         <div ref={quantityRef} className="min-w-0 mb-10 scroll-mt-24">
           <fieldset className="min-w-0">
             <legend className="mb-5 flex items-center gap-3 font-heading text-xl font-semibold">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm text-primary">6</span>Antal
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm text-primary">{options.length + 1}</span>Antal {productName.toLowerCase()}
             </legend>
             <div className="flex flex-wrap gap-3 mb-4">
               {[50, 100, 250, 500].map((value) => <Button type="button" key={value} variant="secondary" aria-pressed={quantity === value} onClick={() => { setQuantityText(String(value)); scrollToStep(priceRef.current); }} className={`border transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${quantity === value ? "border-primary bg-primary/5 text-primary" : "border-border bg-card"}`}>{value} st</Button>)}
             </div>
-            <label htmlFor="product-quantity" className="block text-sm font-medium mb-2">Antal kassar</label>
+            <label htmlFor="product-quantity" className="block text-sm font-medium mb-2">Antal {productName.toLowerCase()}</label>
             <input id="product-quantity" type="number" min="1" step="1" inputMode="numeric" value={quantityText} onChange={(event) => setQuantityText(event.target.value)} className="h-11 w-40 rounded-md border border-input bg-background px-3 text-foreground" placeholder="Ange antal" aria-invalid={quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1)} />
             {quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1) && <p className="mt-2 text-sm text-destructive">Ange ett heltal större än 0.</p>}
           </fieldset>

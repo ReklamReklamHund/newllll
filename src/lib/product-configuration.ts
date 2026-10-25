@@ -18,7 +18,9 @@ export function availableChoices(option: ProductOption, options: ProductOption[]
 export function selectProductChoice(options: ProductOption[], selected: ProductSelections, id: string, index: number): ProductSelections {
   const next = { ...selected, [id]: index };
   if (id === "tryck" && selected.tryck !== index) {
-    delete next.fargning;
+    for (const option of options) {
+      if (option.choices.some((choice) => choice.printMethod)) delete next[option.id];
+    }
     const coloring = options.find((option) => option.id === "fargning");
     if (coloring) {
       const choices = availableChoices(coloring, options, next);
