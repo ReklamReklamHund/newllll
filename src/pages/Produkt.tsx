@@ -47,8 +47,8 @@ export default function Produkt() {
                 {found.item.options?.length ? (
                   <>
                     <dl className="mt-6 grid grid-cols-2 gap-4 border-y border-border py-5 text-sm">
-                      <div><dt className="text-muted-foreground">Format</dt><dd className="mt-1 font-medium">{found.item.name === "Läppbalsam" ? "7 cm, diameter 1,9 cm" : found.item.name === "Tändsticksask" ? "Mindre ask" : <>40 x 10 x 35<br />38 x 10 x 42</>}</dd></div>
-                      <div><dt className="text-muted-foreground">Grundfärger</dt><dd className="mt-1 font-medium">{found.item.name === "Läppbalsam" ? "17 alternativ" : found.item.name === "Tändsticksask" ? "8 alternativ" : "11 alternativ"}</dd></div>
+                      <div><dt className="text-muted-foreground">Format</dt><dd className="mt-1 font-medium">{found.item.name === "Läppbalsam" ? "7 cm, diameter 1,9 cm" : found.item.name === "Tändsticksask" ? "53 × 36 × 12 mm" : <>40 x 10 x 35<br />38 x 10 x 42</>}</dd></div>
+                      <div><dt className="text-muted-foreground">Grundfärger</dt><dd className="mt-1 font-medium">{found.item.name === "Läppbalsam" ? "17 alternativ" : found.item.name === "Tändsticksask" ? "9 alternativ" : "11 alternativ"}</dd></div>
                     </dl>
                     <div className="mt-7 flex flex-wrap items-center gap-3">
                       <Button size="lg" onClick={customize}>Anpassa <ArrowDown aria-hidden="true" /></Button>
@@ -57,7 +57,17 @@ export default function Produkt() {
                           <Info className="h-4 w-4 text-primary" aria-hidden="true" /> Information
                         </summary>
                         <div className="mt-4 w-full max-w-2xl rounded-lg border border-border bg-muted/30 p-5 text-sm leading-relaxed text-muted-foreground shadow-sm sm:p-6">
-                          {found.item.name === "Bomullskasse" ? (
+                          {found.item.name === "Tändsticksask" ? (
+                            <>
+                              <h2 className="font-heading text-xl font-semibold text-foreground">Information om tändsticksask</h2>
+                              <ul className="mt-3 list-disc space-y-2 pl-5">
+                                <li>Material: Kartong, trä</li>
+                                <li>Storlek: 53 × 36 × 12 mm</li>
+                                <li>Minsta antal: 2 500 st</li>
+                                <li>Finns i 9 färger: transparent, svart, vit, grön, blå, röd, rosa, grå och gul</li>
+                              </ul>
+                            </>
+                          ) : found.item.name === "Bomullskasse" ? (
                             <>
                               <h2 className="font-heading text-xl font-semibold text-foreground">Information om bomullskasse</h2>
                               <p className="mt-3">Den extra lätta bomullskvaliteten hos de OEKO-TEX®-certifierade shoppingkassarna gör dem till ett praktiskt litet köphjälpmedel: Snabbt och enkelt ihopfällda kan de tas med var som helst och dras ut direkt vid behov. Spontana köp stuvas undan på nolltid. Och vem har dina kunder att tacka för de praktiska väskorna? Det är bäst att trycka detta med stora bokstäver på det mjuka tyget.</p>
