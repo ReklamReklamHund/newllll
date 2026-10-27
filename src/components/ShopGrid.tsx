@@ -205,7 +205,27 @@ export const shopColumns: { title: string; items: Product[] }[] = [
         ],
       },
       { name: "Kulspetspenna" },
-      { name: "Tändsticksask" },
+      {
+        name: "Tändsticksask",
+        description: "Tändsticksask med valfri färg på lådan och plats för din logotyp.",
+        options: [
+          {
+            id: "farg",
+            label: "Färg på lådan",
+            kind: "image",
+            choices: [
+              { label: "Röd", price: 0, swatch: "#d62828" },
+              { label: "Svart", price: 0, swatch: "#1a1a1a" },
+              { label: "Vit", price: 0, swatch: "#f5f5f0" },
+              { label: "Blå", price: 0, swatch: "#1d4ed8" },
+              { label: "Grön", price: 0, swatch: "#2d8a3e" },
+              { label: "Gul", price: 0, swatch: "#eab308" },
+              { label: "Orange", price: 0, swatch: "#ea580c" },
+              { label: "Ljusgrön", price: 0, swatch: "#86efac" },
+            ],
+          },
+        ],
+      },
       { name: "Produkt 4" },
       { name: "Produkt 5" },
       { name: "Produkt 6" },

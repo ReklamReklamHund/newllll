@@ -93,7 +93,7 @@ export default function ProductCustomizer({ options, productName }: { options: P
           <h3 className="font-heading text-xl font-semibold">Estimerat pris</h3>
           {price ? <>
             <p className="mt-3 font-heading text-4xl font-bold">{priceFormat.format(price.total)}</p>
-            <p className="mt-2 text-sm text-muted-foreground">{priceFormat.format(price.unit)} per kasse × {quantity} st</p>
+            <p className="mt-2 text-sm text-muted-foreground">{priceFormat.format(price.unit)} per st × {quantity} st</p>
             <dl className="mt-5 grid gap-2 text-sm sm:grid-cols-2">{options.map((option) => <div key={option.id}><dt className="text-muted-foreground">{option.label}</dt><dd className="font-medium">{option.choices[selected[option.id]]?.label}</dd></div>)}</dl>
           </> : <p className="mt-3 text-muted-foreground">Välj alla alternativ och antal för att se priset.</p>}
           <p className="mt-4 text-sm text-muted-foreground">Preliminärt exempelpris, inte en offert. Pris exkl. moms och frakt. Slutligt pris bekräftas av oss.</p>
