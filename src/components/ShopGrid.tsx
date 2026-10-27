@@ -205,7 +205,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
           },
         ],
       },
-      { name: "Kulspetspenna" },
+      { name: "Kulspetspenna", image: "/images/image copy 8.png" },
       {
         name: "Tändsticksask",
         image: "/images/Tändsticksask/image.png",
