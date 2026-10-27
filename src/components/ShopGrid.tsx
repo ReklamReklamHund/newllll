@@ -215,7 +215,6 @@ export const shopColumns: { title: string; items: Product[] }[] = [
             label: "Färg på lådan",
             kind: "image",
             choices: [
-              { label: "Transparent", price: 0, swatch: "linear-gradient(135deg, #ffffff, #f1f5f9)" },
               { label: "Svart", price: 0, swatch: "#333333" },
               { label: "Vit", price: 0, swatch: "#fafafa" },
               { label: "Grön", price: 0, swatch: "#2dcc32" },
