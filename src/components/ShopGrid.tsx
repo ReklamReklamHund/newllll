@@ -207,6 +207,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
       { name: "Kulspetspenna" },
       {
         name: "Tändsticksask",
+        image: "/images/Tändsticksask/image.png",
         description: "Tändsticksask med valfri färg på lådan och plats för din logotyp.",
         options: [
           {
