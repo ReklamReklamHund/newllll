@@ -21,6 +21,7 @@ export type Product = {
   image?: string;
   description?: string;
   options?: ProductOption[];
+  minQuantity?: number;
 };
 
 
@@ -209,6 +210,7 @@ export const shopColumns: { title: string; items: Product[] }[] = [
         name: "Tändsticksask",
         image: "/images/Tändsticksask/image.png",
         description: "Tändsticksask med valfri färg på lådan och plats för din logotyp.",
+        minQuantity: 2500,
         options: [
           {
             id: "farg",

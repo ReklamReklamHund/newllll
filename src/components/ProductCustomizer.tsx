@@ -8,11 +8,12 @@ import type { ProductSelections } from "@/lib/product-configuration";
 
 const priceFormat = new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK", maximumFractionDigits: 0 });
 
-export default function ProductCustomizer({ options, productName }: { options: ProductOption[]; productName: string }) {
+export default function ProductCustomizer({ options, productName, minQuantity = 1 }: { options: ProductOption[]; productName: string; minQuantity?: number }) {
   const [selected, setSelected] = useState<ProductSelections>({});
   const [quantityText, setQuantityText] = useState("");
   const quantity = Number(quantityText);
-  const price = configurationPrice(options, selected, quantity);
+  const validQuantity = Number.isInteger(quantity) && quantity >= minQuantity;
+  const price = validQuantity ? configurationPrice(options, selected, quantity) : null;
   const stepRefs = useRef<(HTMLFieldSetElement | null)[]>([]);
   const quantityRef = useRef<HTMLDivElement>(null);
   const priceRef = useRef<HTMLDivElement>(null);
@@ -81,12 +82,10 @@ export default function ProductCustomizer({ options, productName }: { options: P
             <legend className="mb-5 flex items-center gap-3 font-heading text-xl font-semibold">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm text-primary">{options.length + 1}</span>Antal {productName.toLowerCase()}
             </legend>
-            <div className="flex flex-wrap gap-3 mb-4">
-              {[50, 100, 250, 500].map((value) => <Button type="button" key={value} variant="secondary" aria-pressed={quantity === value} onClick={() => { setQuantityText(String(value)); scrollToStep(priceRef.current); }} className={`border transition-colors duration-200 hover:border-primary hover:bg-primary/5 ${quantity === value ? "border-primary bg-primary/5 text-primary" : "border-border bg-card"}`}>{value} st</Button>)}
-            </div>
+            {minQuantity > 1 && <p className="mb-4 text-sm font-medium text-muted-foreground">Minsta antal {minQuantity.toLocaleString("sv-SE")} st.</p>}
             <label htmlFor="product-quantity" className="block text-sm font-medium mb-2">Antal {productName.toLowerCase()}</label>
-            <input id="product-quantity" type="number" min="1" step="1" inputMode="numeric" value={quantityText} onChange={(event) => setQuantityText(event.target.value)} className="h-11 w-40 rounded-md border border-input bg-background px-3 text-foreground" placeholder="Ange antal" aria-invalid={quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1)} />
-            {quantityText !== "" && (!Number.isInteger(quantity) || quantity < 1) && <p className="mt-2 text-sm text-destructive">Ange ett heltal större än 0.</p>}
+            <input id="product-quantity" type="number" min={minQuantity} step="1" inputMode="numeric" value={quantityText} onChange={(event) => setQuantityText(event.target.value)} className="h-11 w-40 rounded-md border border-input bg-background px-3 text-foreground" placeholder={`Minst ${minQuantity.toLocaleString("sv-SE")}`} aria-invalid={quantityText !== "" && !validQuantity} />
+            {quantityText !== "" && !validQuantity && <p className="mt-2 text-sm text-destructive">Ange minst {minQuantity.toLocaleString("sv-SE")} st.</p>}
           </fieldset>
         </div>
         <div ref={priceRef} className="border-t-2 border-primary pt-6 scroll-mt-24" aria-live="polite" aria-atomic="true">

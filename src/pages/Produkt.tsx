@@ -106,7 +106,7 @@ export default function Produkt() {
             </div>
             {found.item.options?.length ? (
               <div ref={customization} className="scroll-mt-24">
-                <ProductCustomizer key={slug} options={found.item.options} productName={found.item.name} />
+                <ProductCustomizer key={slug} options={found.item.options} productName={found.item.name} minQuantity={found.item.minQuantity} />
               </div>
             ) : null}
           </>
